@@ -1,0 +1,187 @@
+{
+  "nome_projeto": "Reels – Bastidores Divertidos Café com Fé",
+  "cliente": "Café com Fé",
+  "segmento": "Cafeteria",
+  "tipo_de_peca": "Reels",
+  "formato_da_peca": "Vídeo estilo vlog vertical para Instagram",
+  "mensagem_principal": "Descubra o lado divertido e humano do Café com Fé enquanto mostramos nossos bastidores e atendimento acolhedor.",
+  "objetivo": "Gerar engajamento através de um conteúdo descontraído que mostra os bastidores e o atendimento humano da cafeteria.",
+  "insight_publico": "O público valoriza autenticidade e quer se sentir parte da história da marca.",
+  "tom_de_voz": "Descontraído e humano",
+  "ideia_inicial": "Um Reels divertido no Instagram com uma influencer mostrando os bastidores da cafeteria.",
+  "itens_a_evitar": [
+    "Tons excessivamente formais ou comerciais",
+    "Conteúdos que não reflitam a autenticidade e o espírito acolhedor da marca"
+  ],
+  "demografia": "Jovens adultos entre 18 e 35 anos, conectados com redes sociais, interessados em experiências autênticas e locais acolhedores.",
+  "comportamento": "Buscam experiências autênticas e valorizam interações genuínas com marcas que transmitem calor humano.",
+  "necessidades": "",
+  "concorrentes": "",
+  "diferenciais": "Ambiente acolhedor, atendimento personalizado e atmosfera descontraída.",
+  "estilo_narrativo": "Influencer/Persona",
+  "estrutura_recomendada": {
+    "hook": "Início com a influencer chegando na cafeteria, saudando os baristas de forma divertida.",
+    "contexto": "A influencer apresenta rapidamente o Café com Fé e a ideia de mostrar os bastidores.",
+    "desenvolvimento": "Tour pelos bastidores, apresentando a equipe de forma descontraída, mostrando o preparo das bebidas e curiosidades do dia a dia.",
+    "quebra_de_expectativa": "Um momento engraçado ou inesperado, como um desafio entre baristas ou uma situação divertida no atendimento.",
+    "fechamento": "A influencer convida o público a visitar o Café com Fé para viver a experiência por conta própria, finalizando com uma mensagem calorosa."
+  },
+  "roteiro": [
+    {
+      "tempo": "0:00–0:03",
+      "visual": "Close da entrada aconchegante do Café com Fé com música animada de fundo",
+      "texto": "Bem-vindos ao Café com Fé! ☕✨"
+    },
+    {
+      "tempo": "0:04–0:08",
+      "visual": "Influencer cumprimenta baristas sorridentes atrás do balcão",
+      "texto": "Ei! Vamos conhecer o que rola nos bastidores dessa cafeteria incrível?"
+    },
+    {
+      "tempo": "0:09–0:15",
+      "visual": "Barista preparando um café especial com arte no leite",
+      "texto": "Aqui, cada café é feito com carinho e um toque de arte! 🎨"
+    },
+    {
+      "tempo": "0:16–0:20",
+      "visual": "Cliente satisfeito recebendo seu pedido com um sorriso",
+      "texto": "O atendimento é sempre pessoal e cheio de boas vibrações!"
+    },
+    {
+      "tempo": "0:21–0:25",
+      "visual": "Influencer fazendo uma brincadeira com um dos baristas",
+      "texto": "E claro, sempre tem espaço para uma boa risada! 😂"
+    },
+    {
+      "tempo": "0:26–0:29",
+      "visual": "Visão panorâmica do ambiente acolhedor e descontraído",
+      "texto": "No Café com Fé, você se sente em casa. 🏡"
+    },
+    {
+      "tempo": "0:30–0:33",
+      "visual": "Influencer com um café na mão, convidando o público",
+      "texto": "Vem viver essa experiência autêntica com a gente!"
+    }
+  ],
+  "copy_carrossel": [],
+  "copy_kv": "[]",
+  "copy_estatica": "",
+  "cta": "Siga-nos para mais momentos divertidos e venha nos visitar! #CaféComFé",
+  "justificativa": "A estrutura STACCATO permite criar um conteúdo dinâmico e envolvente, perfeito para Reels. O vídeo destaca o lado humano e acolhedor do Café com Fé, alinhando-se ao interesse do público por autenticidade e experiências genuínas, e utiliza o tom descontraído para facilitar a identificação.",
+  "hashtags": [
+    "#CaféComFé",
+    "#BastidoresComFé",
+    "#ExperiênciaAutêntica"
+  ],
+  "index": 0,
+  "message": {
+    "role": "assistant",
+    "content": {
+      "direcao_arte_video": [
+        {
+          "etapa": "Abertura",
+          "composicao": "Close frontal com iluminação natural em uma cena de entrada da cafeteria",
+          "ponto_focal": "Rosto de um barista sorrindo e olhando para a câmera",
+          "tipografia": "Sem texto ou com frases curtas em Roboto Bold no rodapé",
+          "paleta": [
+            "#E76F51"
+          ]
+        },
+        {
+          "etapa": "Transição",
+          "composicao": "Câmera passeando pela cafeteria mostrando clientes interagindo",
+          "ponto_focal": "Interações autênticas entre clientes e staff",
+          "tipografia": "Sem texto",
+          "paleta": [
+            "#F4A261",
+            "#2A9D8F"
+          ]
+        },
+        {
+          "etapa": "Clímax",
+          "composicao": "Close-up em café sendo servido com espuma decorada",
+          "ponto_focal": "Espuma de café com desenho detalhado",
+          "tipografia": "Texto curto com hashtags em Roboto Bold no topo",
+          "paleta": [
+            "#264653",
+            "#F4A261"
+          ]
+        },
+        {
+          "etapa": "Encerramento",
+          "composicao": "Cena panorâmica da cafeteria enquanto o sol se põe",
+          "ponto_focal": "Ambiente acolhedor e convidativo",
+          "tipografia": "Call to action suave em Roboto Bold",
+          "paleta": [
+            "#2A9D8F"
+          ]
+        }
+      ],
+      "referencias_visuais": [
+        {
+          "nome": "Inclusion in Beauty",
+          "descricao": "Campanha realista com luz natural e diversidade",
+          "url": "https://www.behance.net/gallery/95307925/Inclusion-in-Beauty"
+        }
+      ],
+      "justificativa_visual": "O vídeo segue uma narrativa que explora os bastidores e a experiência humana, destacando o lado acolhedor e autêntico da marca Café com Fé. A paleta de cores quentes e naturais promove uma sensação de acolhimento, enquanto as composições dinâmicas e os closes nos rostos e produtos estabelecem uma conexão pessoal com o espectador. A escolha de tipografia Roboto Bold mantém a clareza e promove engajamento através de mensagens curtas e diretas, alinhando-se ao tom de voz descontraído e humano pretendido."
+    },
+    "refusal": null,
+    "annotations": []
+  },
+  "logprobs": null,
+  "finish_reason": "stop",
+  "direcao_arte_video": [
+    {
+      "etapa": "Abertura",
+      "composicao": "Close frontal com iluminação natural em uma cena de entrada da cafeteria",
+      "ponto_focal": "Rosto de um barista sorrindo e olhando para a câmera",
+      "tipografia": "Sem texto ou com frases curtas em Roboto Bold no rodapé",
+      "paleta": [
+        "#E76F51"
+      ]
+    },
+    {
+      "etapa": "Transição",
+      "composicao": "Câmera passeando pela cafeteria mostrando clientes interagindo",
+      "ponto_focal": "Interações autênticas entre clientes e staff",
+      "tipografia": "Sem texto",
+      "paleta": [
+        "#F4A261",
+        "#2A9D8F"
+      ]
+    },
+    {
+      "etapa": "Clímax",
+      "composicao": "Close-up em café sendo servido com espuma decorada",
+      "ponto_focal": "Espuma de café com desenho detalhado",
+      "tipografia": "Texto curto com hashtags em Roboto Bold no topo",
+      "paleta": [
+        "#264653",
+        "#F4A261"
+      ]
+    },
+    {
+      "etapa": "Encerramento",
+      "composicao": "Cena panorâmica da cafeteria enquanto o sol se põe",
+      "ponto_focal": "Ambiente acolhedor e convidativo",
+      "tipografia": "Call to action suave em Roboto Bold",
+      "paleta": [
+        "#2A9D8F"
+      ]
+    }
+  ],
+  "direcao_arte_carrossel": [],
+  "direcao_arte_estatico": null,
+  "referencias_visuais": [
+    {
+      "nome": "Inclusion in Beauty",
+      "descricao": "Campanha realista com luz natural e diversidade",
+      "url": "https://www.behance.net/gallery/95307925/Inclusion-in-Beauty"
+    }
+  ],
+  "justificativa_visual": "O vídeo segue uma narrativa que explora os bastidores e a experiência humana, destacando o lado acolhedor e autêntico da marca Café com Fé. A paleta de cores quentes e naturais promove uma sensação de acolhimento, enquanto as composições dinâmicas e os closes nos rostos e produtos estabelecem uma conexão pessoal com o espectador. A escolha de tipografia Roboto Bold mantém a clareza e promove engajamento através de mensagens curtas e diretas, alinhando-se ao tom de voz descontraído e humano pretendido.",
+  "slug_base": "reels-bastidores-divertidos-cafe-com-fe",
+  "filename": "reels-bastidores-divertidos-cafe-com-fe-20250525_0244.json",
+  "data_criacao": "2025-05-25T02:44:14.319Z"
+}
