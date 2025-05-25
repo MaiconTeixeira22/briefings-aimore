@@ -1,13 +1,18 @@
+type Briefing = {
+  slug: string;
+  title: string;
+};
+
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [briefings, setBriefings] = useState<any[]>([]);
+  const [briefings, setBriefings] = useState<Briefing[]>([]);
 
   useEffect(() => {
     const fetchBriefings = async () => {
       const response = await fetch('/json/index.json');
-      const data = await response.json();
+      const data = (await response.json()) as Briefing[];
       setBriefings(data);
     };
 
