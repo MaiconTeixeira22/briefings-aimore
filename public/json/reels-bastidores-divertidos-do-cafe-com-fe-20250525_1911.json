@@ -1,0 +1,313 @@
+{
+  "nome_projeto": "Reels – Bastidores Divertidos do Café com Fé",
+  "cliente": "Café com Fé",
+  "segmento": "Cafeteria",
+  "tipo_de_peca": "Reels",
+  "formato_da_peca": "Vídeo estilo vlog vertical para Instagram",
+  "mensagem_principal": "Descubra a magia por trás do atendimento acolhedor do Café com Fé.",
+  "objetivo": "Gerar engajamento no Instagram através de um Reels que mostre o atendimento e os bastidores da cafeteria de forma descontraída e humana.",
+  "insight_publico": "Público busca experiências autênticas e valorizam a transparência e a conexão humana nas interações com as marcas.",
+  "tom_de_voz": "Descontraído e humano",
+  "ideia_inicial": "Reels no Instagram com uma influencer mostrando os bastidores da cafeteria.",
+  "itens_a_evitar": [],
+  "demografia": "Adultos jovens entre 18 e 35 anos, urbanos, interessados em experiências gastronômicas e cultura de cafeterias.",
+  "comportamento": "Frequentadores de cafeterias que valorizam experiências autênticas e buscam conexão com marcas humanizadas.",
+  "necessidades": "",
+  "concorrentes": "",
+  "diferenciais": "Atendimento acolhedor e ambiente convidativo.",
+  "estilo_narrativo": "Influencer/Persona",
+  "estrutura_recomendada": {
+    "hook": "Comece com a influencer entrando na cafeteria e sendo recebida calorosamente pela equipe.",
+    "contexto": "Apresente brevemente a proposta do vídeo: uma visita aos bastidores do Café com Fé.",
+    "desenvolvimento": "Mostre a preparação dos cafés, interações divertidas com os baristas e detalhes do ambiente da cafeteria.",
+    "quebra_de_expectativa": "Inclua uma cena engraçada ou surpreendente - como um barista fazendo uma arte inusitada no café.",
+    "fechamento": "Convide o público a visitar o Café com Fé para viver essa experiência pessoalmente."
+  },
+  "roteiro": [
+    {
+      "tempo": "0:00–0:03",
+      "visual": "A influencer entra na cafeteria, câmera na mão, sorriso no rosto.",
+      "texto": "Ei, pessoal! Hoje vou mostrar a mágica por trás do Café com Fé!"
+    },
+    {
+      "tempo": "0:04–0:07",
+      "visual": "Cenas rápidas dos baristas sorrindo e preparando cafés.",
+      "texto": "Aqui, cada café é feito com amor e um toque especial."
+    },
+    {
+      "tempo": "0:08–0:12",
+      "visual": "A influencer conversa com um barista sobre como eles criam uma experiência única.",
+      "texto": "Qual o segredo? Um atendimento acolhedor que faz você se sentir em casa."
+    },
+    {
+      "tempo": "0:13–0:16",
+      "visual": "Cena de um cliente recebendo seu café com um sorriso.",
+      "texto": "Clientes felizes? Temos muitos por aqui!"
+    },
+    {
+      "tempo": "0:17–0:21",
+      "visual": "A influencer experimenta um café e faz um gesto de aprovação.",
+      "texto": "E, claro, o café... é uma delícia!"
+    },
+    {
+      "tempo": "0:22–0:25",
+      "visual": "A câmera captura o ambiente acolhedor e decorado da cafeteria.",
+      "texto": "Ambiente convidativo e vibes incríveis. Tem como não amar?"
+    },
+    {
+      "tempo": "0:26–0:30",
+      "visual": "A influencer acena para a câmera enquanto sai.",
+      "texto": "Venha viver essa experiência autêntica no Café com Fé. Até a próxima!"
+    }
+  ],
+  "copy_carrossel": [],
+  "copy_kv": "[]",
+  "copy_estatica": "",
+  "cta": "Siga nosso perfil e descubra a magia do Café com Fé!",
+  "justificativa": "Esta estrutura aproveita o formato de vlog para criar uma conexão genuína com o público-alvo, destacando a experiência única e humana da cafeteria, que é valorizada pelos frequentadores. A narrativa descontraída e acolhedora reflete o diferencial do atendimento, incentivando o engajamento.",
+  "hashtags": [
+    "#CaféComFé",
+    "#ExperiênciaAutêntica",
+    "#CafeteriaComAmor"
+  ],
+  "index": 0,
+  "message": {
+    "role": "assistant",
+    "content": {
+      "direcao_arte_video": [
+        {
+          "etapa": "Abertura",
+          "composicao": "Close frontal com iluminação natural, fundo realista da cafeteria",
+          "ponto_focal": "Rosto do atendente sorridente olhando para a câmera",
+          "tipografia": "Sem texto ou com frases curtas em Roboto Bold",
+          "paleta": [
+            "#E76F51"
+          ]
+        },
+        {
+          "etapa": "Introdução ao Ambiente",
+          "composicao": "Takes amplos da cafeteria, mostrando decoração acolhedora",
+          "ponto_focal": "Detalhes do ambiente como mesas e xícaras",
+          "tipografia": "Frase curta em Roboto Bold sobre a experiência única",
+          "paleta": [
+            "#2A9D8F",
+            "#F4A261"
+          ]
+        },
+        {
+          "etapa": "Interação com Clientes",
+          "composicao": "Planos médios de atendentes conversando com clientes sorridentes",
+          "ponto_focal": "Sorrisos e expressões amigáveis",
+          "tipografia": "Legendas em Roboto Regular para diálogos informais",
+          "paleta": [
+            "#264653"
+          ]
+        },
+        {
+          "etapa": "Bastidores",
+          "composicao": "Cenas rápidas da preparação do café, grãos moídos e vapor",
+          "ponto_focal": "Maquinário e mãos em ação",
+          "tipografia": "Sem texto para foco visual",
+          "paleta": [
+            "#E9C46A"
+          ]
+        },
+        {
+          "etapa": "Encerramento",
+          "composicao": "Plano detalhe de xícara de café sendo servida",
+          "ponto_focal": "Café espumante na xícara",
+          "tipografia": "Frase de encerramento em Roboto Bold: 'Descubra a magia do Café com Fé'",
+          "paleta": [
+            "#F4A261"
+          ]
+        }
+      ],
+      "referencias_visuais": [
+        {
+          "nome": "Inclusion in Beauty",
+          "descricao": "Campanha realista com luz natural e diversidade",
+          "url": "https://www.behance.net/gallery/95307925/Inclusion-in-Beauty"
+        }
+      ],
+      "justificativa_visual": "A proposta de direção de arte busca capturar a essência descontraída e acolhedora do Café com Fé, destacando o atendimento humanizado e o ambiente convidativo. Utiliza-se de luz natural e paleta de cores quentes para transmitir conforto e autenticidade. A estrutura em estilo vlog aproxima o público dos bastidores, gerando interesse e engajamento ao mostrar uma experiência completa na cafeteria."
+    },
+    "refusal": null,
+    "annotations": []
+  },
+  "logprobs": null,
+  "finish_reason": "stop",
+  "direcao_arte_video": [
+    {
+      "etapa": "Abertura",
+      "composicao": "Close frontal com iluminação natural, fundo realista da cafeteria",
+      "ponto_focal": "Rosto do atendente sorridente olhando para a câmera",
+      "tipografia": "Sem texto ou com frases curtas em Roboto Bold",
+      "paleta": [
+        "#E76F51"
+      ]
+    },
+    {
+      "etapa": "Introdução ao Ambiente",
+      "composicao": "Takes amplos da cafeteria, mostrando decoração acolhedora",
+      "ponto_focal": "Detalhes do ambiente como mesas e xícaras",
+      "tipografia": "Frase curta em Roboto Bold sobre a experiência única",
+      "paleta": [
+        "#2A9D8F",
+        "#F4A261"
+      ]
+    },
+    {
+      "etapa": "Interação com Clientes",
+      "composicao": "Planos médios de atendentes conversando com clientes sorridentes",
+      "ponto_focal": "Sorrisos e expressões amigáveis",
+      "tipografia": "Legendas em Roboto Regular para diálogos informais",
+      "paleta": [
+        "#264653"
+      ]
+    },
+    {
+      "etapa": "Bastidores",
+      "composicao": "Cenas rápidas da preparação do café, grãos moídos e vapor",
+      "ponto_focal": "Maquinário e mãos em ação",
+      "tipografia": "Sem texto para foco visual",
+      "paleta": [
+        "#E9C46A"
+      ]
+    },
+    {
+      "etapa": "Encerramento",
+      "composicao": "Plano detalhe de xícara de café sendo servida",
+      "ponto_focal": "Café espumante na xícara",
+      "tipografia": "Frase de encerramento em Roboto Bold: 'Descubra a magia do Café com Fé'",
+      "paleta": [
+        "#F4A261"
+      ]
+    }
+  ],
+  "direcao_arte_carrossel": [],
+  "direcao_arte_estatico": null,
+  "referencias_visuais": [
+    {
+      "nome": "Inclusion in Beauty",
+      "descricao": "Campanha realista com luz natural e diversidade",
+      "url": "https://www.behance.net/gallery/95307925/Inclusion-in-Beauty"
+    }
+  ],
+  "justificativa_visual": "A proposta de direção de arte busca capturar a essência descontraída e acolhedora do Café com Fé, destacando o atendimento humanizado e o ambiente convidativo. Utiliza-se de luz natural e paleta de cores quentes para transmitir conforto e autenticidade. A estrutura em estilo vlog aproxima o público dos bastidores, gerando interesse e engajamento ao mostrar uma experiência completa na cafeteria.",
+  "slug_base": "reels-bastidores-divertidos-do-cafe-com-fe",
+  "kind": "drive#file",
+  "id": "1yCSqVfOjJUNyBLg77w55A_4SPIjHdVZ2",
+  "name": "Café com Fé – Reels – Bastidores Divertidos do Café com Fé.pdf",
+  "mimeType": "application/pdf",
+  "starred": false,
+  "trashed": false,
+  "explicitlyTrashed": false,
+  "parents": [
+    "15rQI_tmuTFQ4Jofp5aMLiulXKDxH3-B2"
+  ],
+  "spaces": [
+    "drive"
+  ],
+  "version": "2",
+  "webContentLink": "https://drive.google.com/uc?id=1yCSqVfOjJUNyBLg77w55A_4SPIjHdVZ2&export=download",
+  "webViewLink": "https://drive.google.com/file/d/1yCSqVfOjJUNyBLg77w55A_4SPIjHdVZ2/view?usp=drivesdk",
+  "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/pdf",
+  "hasThumbnail": false,
+  "thumbnailVersion": "0",
+  "viewedByMe": false,
+  "createdTime": "2025-05-25T19:11:32.709Z",
+  "modifiedTime": "2025-05-25T19:11:33.562Z",
+  "modifiedByMeTime": "2025-05-25T19:11:33.562Z",
+  "modifiedByMe": true,
+  "owners": [
+    {
+      "kind": "drive#user",
+      "displayName": "Maicon Teixeira",
+      "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+      "me": true,
+      "permissionId": "08251672180811578534",
+      "emailAddress": "maicondesouzateixeira@gmail.com"
+    }
+  ],
+  "lastModifyingUser": {
+    "kind": "drive#user",
+    "displayName": "Maicon Teixeira",
+    "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+    "me": true,
+    "permissionId": "08251672180811578534",
+    "emailAddress": "maicondesouzateixeira@gmail.com"
+  },
+  "shared": false,
+  "ownedByMe": true,
+  "capabilities": {
+    "canAcceptOwnership": false,
+    "canAddChildren": false,
+    "canAddMyDriveParent": false,
+    "canChangeCopyRequiresWriterPermission": true,
+    "canChangeSecurityUpdateEnabled": false,
+    "canChangeViewersCanCopyContent": true,
+    "canComment": true,
+    "canCopy": true,
+    "canDelete": true,
+    "canDisableInheritedPermissions": false,
+    "canDownload": true,
+    "canEdit": true,
+    "canEnableInheritedPermissions": true,
+    "canListChildren": false,
+    "canModifyContent": true,
+    "canModifyContentRestriction": true,
+    "canModifyEditorContentRestriction": true,
+    "canModifyOwnerContentRestriction": true,
+    "canModifyLabels": false,
+    "canMoveChildrenWithinDrive": false,
+    "canMoveItemIntoTeamDrive": true,
+    "canMoveItemOutOfDrive": true,
+    "canMoveItemWithinDrive": true,
+    "canReadLabels": false,
+    "canReadRevisions": true,
+    "canRemoveChildren": false,
+    "canRemoveContentRestriction": false,
+    "canRemoveMyDriveParent": true,
+    "canRename": true,
+    "canShare": true,
+    "canTrash": true,
+    "canUntrash": true
+  },
+  "viewersCanCopyContent": true,
+  "copyRequiresWriterPermission": false,
+  "writersCanShare": true,
+  "permissions": [
+    {
+      "kind": "drive#permission",
+      "id": "08251672180811578534",
+      "type": "user",
+      "emailAddress": "maicondesouzateixeira@gmail.com",
+      "role": "owner",
+      "displayName": "maicondesouzateixeira",
+      "deleted": false,
+      "pendingOwner": false
+    }
+  ],
+  "permissionIds": [
+    "08251672180811578534"
+  ],
+  "originalFilename": "Untitled",
+  "fullFileExtension": "pdf",
+  "fileExtension": "pdf",
+  "md5Checksum": "d58069fdd94fd47309e22431b5d7b5c5",
+  "sha1Checksum": "9bb8530980023266df5b02f12d77224260e82661",
+  "sha256Checksum": "74512a735a8376128afd3deb3d3da17a1076788292ff9139ed061594af3818d4",
+  "size": "440606",
+  "quotaBytesUsed": "440606",
+  "headRevisionId": "0B0iy5bBcWHFhYnFSbGVKRXoza0N5UGpZL29IRVVPR1ZOYVQwPQ",
+  "isAppAuthorized": true,
+  "linkShareMetadata": {
+    "securityUpdateEligible": false,
+    "securityUpdateEnabled": true
+  },
+  "inheritedPermissionsDisabled": false,
+  "filename": "reels-bastidores-divertidos-do-cafe-com-fe-20250525_1911.json",
+  "slug": "reels-bastidores-divertidos-do-cafe-com-fe",
+  "data_criacao": "2025-05-25T19:11:38.729Z",
+  "link_pdf": "https://drive.google.com/file/d/1yCSqVfOjJUNyBLg77w55A_4SPIjHdVZ2/view?usp=drivesdk"
+}
