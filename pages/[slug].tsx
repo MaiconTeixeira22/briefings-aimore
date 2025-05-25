@@ -118,7 +118,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
         <h1 className="title">
           {briefing.nome_projeto}
         </h1>
-        {/* Primeira linha: cliente, slug, segmento, tipo de peça, formato */}
+        {/* Identificação: cliente, slug, segmento, tipo de peça, formato */}
         <div className="container">
           <div className="col">
             <h2>Cliente</h2>
@@ -147,43 +147,43 @@ export default function SlugPage({ briefing }: SlugPageProps) {
             </div>
           )}
         </div>
-        {/* Segunda linha: objetivo, mensagem principal, tom de voz, insight público, diferenciais */}
-        <div className="container">
+        {/* Narrativa Estratégica */}
+        <div className="block">
           {briefing.objetivo && (
-            <div className="col">
+            <div className="block">
               <h2>Objetivo</h2>
               <p>{briefing.objetivo}</p>
             </div>
           )}
           {briefing.mensagem_principal && (
-            <div className="col">
+            <div className="block">
               <h2>Mensagem Principal</h2>
               <p>{briefing.mensagem_principal}</p>
             </div>
           )}
           {briefing.tom_de_voz && (
-            <div className="col">
+            <div className="block">
               <h2>Tom de Voz</h2>
               <p>{briefing.tom_de_voz}</p>
             </div>
           )}
           {briefing.insight_publico && (
-            <div className="col">
+            <div className="block">
               <h2>Insight do Público</h2>
               <p>{briefing.insight_publico}</p>
             </div>
           )}
           {briefing.diferenciais && (
-            <div className="col">
+            <div className="block">
               <h2>Diferenciais</h2>
               <p>{briefing.diferenciais}</p>
             </div>
           )}
         </div>
-        {/* Itens a evitar, Estilo Narrativo, Estrutura Recomendada */}
-        <div className="container">
+        {/* Contexto e Direcionamento */}
+        <div className="block">
           {briefing.itens_a_evitar && briefing.itens_a_evitar.length > 0 && (
-            <div className="col">
+            <div className="block">
               <h2>Itens a Evitar</h2>
               <ul>
                 {briefing.itens_a_evitar.map((item, idx) => (
@@ -193,13 +193,13 @@ export default function SlugPage({ briefing }: SlugPageProps) {
             </div>
           )}
           {briefing.estilo_narrativo && (
-            <div className="col">
+            <div className="block">
               <h2>Estilo Narrativo</h2>
               <p>{briefing.estilo_narrativo}</p>
             </div>
           )}
           {briefing.estrutura_recomendada && (
-            <div className="col">
+            <div className="block">
               <h2>Estrutura Recomendada</h2>
               <ul>
                 {briefing.estrutura_recomendada.hook && <li><b>Hook:</b> {briefing.estrutura_recomendada.hook}</li>}
@@ -211,47 +211,48 @@ export default function SlugPage({ briefing }: SlugPageProps) {
             </div>
           )}
         </div>
-        {/* Roteiro, CTA, Justificativa, Hashtags */}
-        <div className="container">
-          {briefing.roteiro && briefing.roteiro.length > 0 && (
-            <div className="col">
-              <h2>Roteiro</h2>
-              <div className="table-container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Tempo</th>
-                      <th>Texto</th>
-                      <th>Visual</th>
+        {/* Roteiro */}
+        {briefing.roteiro && briefing.roteiro.length > 0 && (
+          <div className="block">
+            <h2>Roteiro</h2>
+            <div className="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tempo</th>
+                    <th>Texto</th>
+                    <th>Visual</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {briefing.roteiro.map((r, idx) => (
+                    <tr key={idx}>
+                      <td>{r.tempo}</td>
+                      <td>{r.texto}</td>
+                      <td>{r.visual}</td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {briefing.roteiro.map((r, idx) => (
-                      <tr key={idx}>
-                        <td>{r.tempo}</td>
-                        <td>{r.texto}</td>
-                        <td>{r.visual}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          )}
+          </div>
+        )}
+        {/* Encerramento */}
+        <div className="block">
           {briefing.cta && (
-            <div className="col">
+            <div className="block">
               <h2>Call to Action</h2>
               <p>{briefing.cta}</p>
             </div>
           )}
           {briefing.justificativa && (
-            <div className="col">
+            <div className="block">
               <h2>Justificativa</h2>
               <p>{briefing.justificativa}</p>
             </div>
           )}
           {briefing.hashtags && briefing.hashtags.length > 0 && (
-            <div className="col">
+            <div className="block">
               <h2>Hashtags</h2>
               <div>
                 {briefing.hashtags.map((h, idx) => (
