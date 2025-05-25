@@ -6,7 +6,6 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 interface Briefing {
   nome_projeto: string;
   cliente: string;
-  slug: string;
   segmento?: string;
   tipo_de_peca?: string;
   formato_da_peca?: string;
@@ -40,6 +39,7 @@ interface Briefing {
     descricao: string;
     url: string;
   }[];
+  link_pdf?: string;
 }
 
 interface SlugPageProps {
@@ -63,38 +63,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params?.slug) {
-    return { notFound: true };
-  }
+  if (!params?.slug) return { notFound: true };
+
   const filePath = path.join(process.cwd(), 'public/json', `${params.slug}.json`);
-  if (!fs.existsSync(filePath)) {
-    return { notFound: true };
-  }
+  if (!fs.existsSync(filePath)) return { notFound: true };
+
   const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const data = JSON.parse(fileContent);
-  // Pass all fields (even undefined) as per Briefing interface
-  const briefing: Briefing = {
-    nome_projeto: data.nome_projeto,
-    cliente: data.cliente,
-    slug: data.slug,
-    segmento: data.segmento,
-    tipo_de_peca: data.tipo_de_peca,
-    formato_da_peca: data.formato_da_peca,
-    objetivo: data.objetivo,
-    mensagem_principal: data.mensagem_principal,
-    tom_de_voz: data.tom_de_voz,
-    insight_publico: data.insight_publico,
-    diferenciais: data.diferenciais,
-    itens_a_evitar: data.itens_a_evitar,
-    estilo_narrativo: data.estilo_narrativo,
-    estrutura_recomendada: data.estrutura_recomendada,
-    roteiro: data.roteiro,
-    cta: data.cta,
-    justificativa: data.justificativa,
-    hashtags: data.hashtags,
-    direcao_arte_video: data.direcao_arte_video,
-    referencias_visuais: data.referencias_visuais,
-  };
+  const briefing = JSON.parse(fileContent);
+
   return {
     props: { briefing },
   };
@@ -105,201 +81,241 @@ export default function SlugPage({ briefing }: SlugPageProps) {
     <>
       <Head>
         <title>{`${briefing.nome_projeto} | AiMore Briefing`}</title>
-        <meta name="description" content={`Briefing completo do projeto ${briefing.nome_projeto} para ${briefing.cliente}`} />
+        <meta
+          name="description"
+          content={`Briefing do projeto ${briefing.nome_projeto} para ${briefing.cliente}`}
+        />
       </Head>
-      <main className="page-container">
-        {/* Botão de download PDF */}
-        <a
-          href={`/pdfs/${briefing.slug}.pdf`}
-          target="_blank"
-          download
-          className="download-btn"
-        >⬇️ Baixar PDF</a>
-        <h1 className="title">
-          {briefing.nome_projeto}
-        </h1>
-        {/* Identificação: cliente, slug, segmento, tipo de peça, formato */}
-        <div className="container">
-          <div className="col">
-            <h2>Cliente</h2>
-            <p>{briefing.cliente}</p>
-          </div>
-          <div className="col">
-            <h2>Slug</h2>
-            <p>{briefing.slug}</p>
-          </div>
-          {briefing.segmento && (
-            <div className="col">
-              <h2>Segmento</h2>
-              <p>{briefing.segmento}</p>
-            </div>
-          )}
-          {briefing.tipo_de_peca && (
-            <div className="col">
-              <h2>Tipo de Peça</h2>
-              <p>{briefing.tipo_de_peca}</p>
-            </div>
-          )}
-          {briefing.formato_da_peca && (
-            <div className="col">
-              <h2>Formato da Peça</h2>
-              <p>{briefing.formato_da_peca}</p>
-            </div>
-          )}
-        </div>
-        {/* Narrativa Estratégica */}
-        <div className="block">
-          {briefing.objetivo && (
-            <div className="block">
-              <h2>Objetivo</h2>
-              <p>{briefing.objetivo}</p>
-            </div>
-          )}
-          {briefing.mensagem_principal && (
-            <div className="block">
-              <h2>Mensagem Principal</h2>
-              <p>{briefing.mensagem_principal}</p>
-            </div>
-          )}
-          {briefing.tom_de_voz && (
-            <div className="block">
-              <h2>Tom de Voz</h2>
-              <p>{briefing.tom_de_voz}</p>
-            </div>
-          )}
-          {briefing.insight_publico && (
-            <div className="block">
-              <h2>Insight do Público</h2>
-              <p>{briefing.insight_publico}</p>
-            </div>
-          )}
-          {briefing.diferenciais && (
-            <div className="block">
-              <h2>Diferenciais</h2>
-              <p>{briefing.diferenciais}</p>
-            </div>
-          )}
-        </div>
-        {/* Contexto e Direcionamento */}
-        <div className="block">
-          {briefing.itens_a_evitar && briefing.itens_a_evitar.length > 0 && (
-            <div className="block">
-              <h2>Itens a Evitar</h2>
-              <ul>
-                {briefing.itens_a_evitar.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {briefing.estilo_narrativo && (
-            <div className="block">
-              <h2>Estilo Narrativo</h2>
-              <p>{briefing.estilo_narrativo}</p>
-            </div>
-          )}
-          {briefing.estrutura_recomendada && (
-            <div className="block">
-              <h2>Estrutura Recomendada</h2>
-              <ul>
-                {briefing.estrutura_recomendada.hook && <li><b>Hook:</b> {briefing.estrutura_recomendada.hook}</li>}
-                {briefing.estrutura_recomendada.contexto && <li><b>Contexto:</b> {briefing.estrutura_recomendada.contexto}</li>}
-                {briefing.estrutura_recomendada.desenvolvimento && <li><b>Desenvolvimento:</b> {briefing.estrutura_recomendada.desenvolvimento}</li>}
-                {briefing.estrutura_recomendada.quebra_de_expectativa && <li><b>Quebra de Expectativa:</b> {briefing.estrutura_recomendada.quebra_de_expectativa}</li>}
-                {briefing.estrutura_recomendada.fechamento && <li><b>Fechamento:</b> {briefing.estrutura_recomendada.fechamento}</li>}
-              </ul>
-            </div>
-          )}
-        </div>
-        {/* Roteiro */}
-        {briefing.roteiro && briefing.roteiro.length > 0 && (
-          <div className="block">
-            <h2>Roteiro</h2>
-            <div className="table-container">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Tempo</th>
-                    <th>Texto</th>
-                    <th>Visual</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {briefing.roteiro.map((r, idx) => (
-                    <tr key={idx}>
-                      <td>{r.tempo}</td>
-                      <td>{r.texto}</td>
-                      <td>{r.visual}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
+
+      <header className="page-header">
+        <h1 className="title">{briefing.nome_projeto}</h1>
+        {briefing.link_pdf && (
+          <a
+            href={briefing.link_pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="download-btn sticky-download"
+            aria-label="Baixar PDF do briefing"
+          >
+            ⬇️ Baixar PDF
+          </a>
         )}
-        {/* Encerramento */}
-        <div className="block">
-          {briefing.cta && (
-            <div className="block">
-              <h2>Call to Action</h2>
-              <p>{briefing.cta}</p>
-            </div>
-          )}
-          {briefing.justificativa && (
-            <div className="block">
-              <h2>Justificativa</h2>
-              <p>{briefing.justificativa}</p>
-            </div>
-          )}
-          {briefing.hashtags && briefing.hashtags.length > 0 && (
-            <div className="block">
-              <h2>Hashtags</h2>
-              <div>
-                {briefing.hashtags.map((h, idx) => (
-                  <span key={idx} className="tag">
-                    #{h}
-                  </span>
-                ))}
+      </header>
+
+      <main className="page-container">
+        <div className="container">
+
+          {/* Identificação */}
+          <section className="section">
+            <h2 className="subtitle">Identificação</h2>
+            <div className="grid">
+              <div className="block">
+                <h3>Cliente</h3>
+                <p>{briefing.cliente}</p>
               </div>
+              {briefing.segmento && (
+                <div className="block">
+                  <h3>Segmento</h3>
+                  <p>{briefing.segmento}</p>
+                </div>
+              )}
+              {briefing.tipo_de_peca && (
+                <div className="block">
+                  <h3>Tipo de Peça</h3>
+                  <p>{briefing.tipo_de_peca}</p>
+                </div>
+              )}
+              {briefing.formato_da_peca && (
+                <div className="block">
+                  <h3>Formato</h3>
+                  <p>{briefing.formato_da_peca}</p>
+                </div>
+              )}
             </div>
+          </section>
+
+          {/* Narrativa */}
+          <section className="section">
+            <h2 className="subtitle">Narrativa e Direcionamento</h2>
+            <div className="grid">
+              {briefing.objetivo && (
+                <div className="block">
+                  <h3>Objetivo</h3>
+                  <p>{briefing.objetivo}</p>
+                </div>
+              )}
+              {briefing.mensagem_principal && (
+                <div className="block">
+                  <h3>Mensagem Principal</h3>
+                  <p>{briefing.mensagem_principal}</p>
+                </div>
+              )}
+              {briefing.tom_de_voz && (
+                <div className="block">
+                  <h3>Tom de Voz</h3>
+                  <p>{briefing.tom_de_voz}</p>
+                </div>
+              )}
+              {briefing.insight_publico && (
+                <div className="block">
+                  <h3>Insight do Público</h3>
+                  <p>{briefing.insight_publico}</p>
+                </div>
+              )}
+              {briefing.diferenciais && (
+                <div className="block">
+                  <h3>Diferenciais</h3>
+                  <p>{briefing.diferenciais}</p>
+                </div>
+              )}
+              {briefing.itens_a_evitar?.length > 0 && (
+                <div className="block">
+                  <h3>Itens a Evitar</h3>
+                  <ul>
+                    {briefing.itens_a_evitar.map((item: string, i: number) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {briefing.estilo_narrativo && (
+                <div className="block">
+                  <h3>Estilo Narrativo</h3>
+                  <p>{briefing.estilo_narrativo}</p>
+                </div>
+              )}
+              {briefing.estrutura_recomendada && (
+                <div className="block">
+                  <h3>Estrutura Recomendada</h3>
+                  <ul>
+                    {briefing.estrutura_recomendada.hook && (
+                      <li><b>Hook:</b> {briefing.estrutura_recomendada.hook}</li>
+                    )}
+                    {briefing.estrutura_recomendada.contexto && (
+                      <li><b>Contexto:</b> {briefing.estrutura_recomendada.contexto}</li>
+                    )}
+                    {briefing.estrutura_recomendada.desenvolvimento && (
+                      <li><b>Desenvolvimento:</b> {briefing.estrutura_recomendada.desenvolvimento}</li>
+                    )}
+                    {briefing.estrutura_recomendada.quebra_de_expectativa && (
+                      <li><b>Quebra de Expectativa:</b> {briefing.estrutura_recomendada.quebra_de_expectativa}</li>
+                    )}
+                    {briefing.estrutura_recomendada.fechamento && (
+                      <li><b>Fechamento:</b> {briefing.estrutura_recomendada.fechamento}</li>
+                    )}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </section>
+
+          {/* Roteiro */}
+          {briefing.roteiro?.length > 0 && (
+            <section className="section">
+              <h2 className="subtitle">Roteiro</h2>
+              <div className="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Tempo</th>
+                      <th>Texto</th>
+                      <th>Visual</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {briefing.roteiro.map((r: any, idx: number) => (
+                      <tr key={idx}>
+                        <td>{r.tempo}</td>
+                        <td>{r.texto}</td>
+                        <td>{r.visual}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
           )}
-        </div>
-        {/* Direção de Arte para Vídeo */}
-        {briefing.direcao_arte_video && briefing.direcao_arte_video.length > 0 && (
-          <div className="col video-art">
-            <h2>Direção de Arte para Vídeo</h2>
-            <div className="container">
-              {briefing.direcao_arte_video.map((d, idx) => (
-                <div key={idx} className="col video-art-box">
-                  <p className="video-art-etapa">{d.etapa}</p>
-                  <div>
-                    <b>Composição:</b> {d.composicao}<br />
-                    <b>Ponto Focal:</b> {d.ponto_focal}<br />
-                    <b>Tipografia:</b> {d.tipografia}<br />
-                    <b>Paleta:</b> {d.paleta && d.paleta.map((cor, i) => (
-                      <span key={i} className="palette" style={{ background: cor }} title={cor}></span>
+
+          {/* CTA e Distribuição */}
+          {(briefing.cta || briefing.justificativa || briefing.hashtags?.length > 0) && (
+            <section className="section">
+              <h2 className="subtitle">CTA e Distribuição</h2>
+              <div className="grid">
+                {briefing.cta && (
+                  <div className="block">
+                    <h3>Call to Action</h3>
+                    <p>{briefing.cta}</p>
+                  </div>
+                )}
+                {briefing.justificativa && (
+                  <div className="block">
+                    <h3>Justificativa</h3>
+                    <p>{briefing.justificativa}</p>
+                  </div>
+                )}
+                {briefing.hashtags?.length > 0 && (
+                  <div className="block">
+                    <h3>Hashtags</h3>
+                    {briefing.hashtags.map((h: string, idx: number) => (
+                      <span key={idx} className="tag">#{h}</span>
                     ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        {/* Referências Visuais */}
-        {briefing.referencias_visuais && briefing.referencias_visuais.length > 0 && (
-          <div className="col visual-ref">
-            <h2>Referências Visuais</h2>
-            <div className="container">
-              {briefing.referencias_visuais.map((ref, idx) => (
-                <div key={idx} className="col visual-ref-box">
-                  <p className="visual-ref-nome">{ref.nome}</p>
-                  <div className="visual-ref-desc">{ref.descricao}</div>
-                  <a href={ref.url} target="_blank" rel="noopener noreferrer" className="visual-ref-link">{ref.url}</a>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+                )}
+              </div>
+            </section>
+          )}
+
+          {/* Direção de Arte */}
+          {briefing.direcao_arte_video?.length > 0 && (
+            <section className="section">
+              <h2 className="subtitle">Direção de Arte para Vídeo</h2>
+              <div className="grid">
+                {briefing.direcao_arte_video.map((d: any, idx: number) => (
+                  <div key={idx} className="block">
+                    <p><b>Etapa:</b> {d.etapa}</p>
+                    <p><b>Composição:</b> {d.composicao}</p>
+                    <p><b>Ponto Focal:</b> {d.ponto_focal}</p>
+                    <p><b>Tipografia:</b> {d.tipografia}</p>
+                    <div>
+                      <b>Paleta:</b>{" "}
+                      {d.paleta.map((cor: string, i: number) => (
+                        <span
+                          key={i}
+                          className="palette"
+                          style={{ background: cor }}
+                          title={cor}
+                        ></span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Referências Visuais */}
+          {briefing.referencias_visuais?.length > 0 && (
+            <section className="section">
+              <h2 className="subtitle">Referências Visuais</h2>
+              <div className="grid">
+                {briefing.referencias_visuais.map((ref: any, idx: number) => (
+                  <a
+                    key={idx}
+                    href={ref.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <p className="visual-ref-nome">{ref.nome}</p>
+                    <p className="visual-ref-desc">{ref.descricao}</p>
+                    <span className="visual-ref-link">{ref.url}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+        </div>
       </main>
     </>
   );
