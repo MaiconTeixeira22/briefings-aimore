@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🚀 AiMore Briefings Premium
 
-## Getting Started
+Interface web para organização, visualização e download de briefings criados automaticamente com IA.
 
-First, run the development server:
+![Screenshot](./public/assets/preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🧠 Funcionalidades
+
+- ✅ Listagem dinâmica dos briefings
+- ✅ Página individual de briefing
+- ✅ Download de PDFs hospedados no Google Drive
+- ✅ Interface premium com TailwindCSS + Next.js
+- ✅ Layout responsivo e elegante
+- ✅ Deploy automático via Vercel
+
+## 🔗 Deploy
+
+Acesse: [https://briefings-aimore.vercel.app](https://briefings-aimore.vercel.app)
+
+## 📁 Estrutura de Pastas
+
+```
+/public/json        → JSON dos briefings
+/pages/index.tsx    → Página inicial
+/pages/[slug].tsx   → Página de briefing individual
+/styles/globals.css → Estilo global
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologias
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- React
+- TailwindCSS
+- Vercel
+- Google Drive (armazenamento dos PDFs)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🚀 Rodando localmente
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Clone o projeto:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/MaiconTeixeira22/briefings-aimore.git
+cd briefings-aimore
+npm install
+npm run dev
+```
 
-## Learn More
+Acesse em:  
+```
+http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- Feito na [Vercel](https://vercel.com/)
+- Deploy contínuo integrado ao GitHub
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 👨‍💻 Feito por [@MaiconTeixeira22](https://github.com/MaiconTeixeira22) 🚀

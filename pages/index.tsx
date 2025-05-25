@@ -1,104 +1,55 @@
-import fs from 'fs';
-import path from 'path';
 import Link from 'next/link';
-import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
-interface Briefing {
-  nome_projeto: string;
-  cliente: string;
-  slug: string;
-}
+export default function Home() {
+  const [briefings, setBriefings] = useState<any[]>([]);
 
-export async function getStaticProps() {
-  const dirPath = path.join(process.cwd(), 'public/json');
-  const briefings: Briefing[] = [];
+  useEffect(() => {
+    const fetchBriefings = async () => {
+      const response = await fetch('/json/index.json');
+      const data = await response.json();
+      setBriefings(data);
+    };
 
-  try {
-    const files = fs.readdirSync(dirPath).filter(file => file.endsWith('.json'));
+    fetchBriefings();
+  }, []);
 
-    files.forEach(file => {
-      const filePath = path.join(dirPath, file);
-      const content = fs.readFileSync(filePath, 'utf-8');
-
-      if (content) {
-        try {
-          const data = JSON.parse(content);
-
-          if (data.nome_projeto && data.cliente && data.slug) {
-            briefings.push({
-              nome_projeto: data.nome_projeto,
-              cliente: data.cliente,
-              slug: data.slug,
-            });
-          } else {
-            console.warn(`⚠️ Dados incompletos no arquivo ${file}`);
-          }
-        } catch (error) {
-          console.error(`❌ Erro ao ler o JSON ${file}:`, error);
-        }
-      } else {
-        console.warn(`⚠️ Arquivo vazio: ${file}`);
-      }
-    });
-  } catch (error) {
-    console.error('❌ Erro ao acessar a pasta public/json:', error);
-  }
-
-  return {
-    props: { briefings },
-  };
-}
-
-export default function Home({ briefings }: { briefings: Briefing[] }) {
   return (
-    <>
-      <Head>
-        <title>AiMore Briefings - Plataforma Premium</title>
-        <meta name="description" content="Visualize todos os briefings gerados na plataforma AiMore." />
-      </Head>
-      <main className="bg-black min-h-screen py-20 px-8">
-        <h1 className="text-center text-7xl font-extrabold bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent mb-20 tracking-tight">
+    <div className="min-h-screen bg-[#121212] text-white px-6 py-10">
+      <header className="flex justify-between items-center mb-10 sticky top-0 bg-[#121212] z-50 shadow-md p-4 rounded-xl">
+        <h1 className="text-3xl md:text-5xl font-extrabold gradient-title">
           🚀 AiMore Briefings Premium
         </h1>
+        <a
+          href="https://drive.google.com/drive/folders/SEU_ID_AQUI"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-[#A36BF2] to-[#FF5B9F] text-sm px-4 py-2 rounded-md hover:opacity-90 transition"
+        >
+          Abrir Pasta no Drive
+        </a>
+      </header>
 
-        {briefings.length === 0 ? (
-          <p className="text-center text-neutral-400 text-xl">Nenhum briefing encontrado. 🚧</p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {briefings.map((brief) => (
-              <div
-                key={brief.slug}
-                className="bg-neutral-950 border border-neutral-800 rounded-3xl shadow-2xl p-8 hover:scale-[1.03] hover:border-pink-500 hover:shadow-pink-500/20 transition-all duration-300"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {briefings.length > 0 ? (
+          briefings.map((briefing) => (
+            <div
+              key={briefing.slug}
+              className="bg-[#1e1e1e] border border-[#292929] rounded-2xl p-8 shadow-lg hover:scale-[1.02] hover:shadow-xl transition"
+            >
+              <h2 className="text-lg font-semibold">{briefing.title}</h2>
+              <Link
+                href={`/${briefing.slug}`}
+                className="mt-4 inline-flex items-center text-[#A36BF2] hover:underline"
               >
-                <div>
-                  <h2 className="text-xl font-bold mb-2 text-white">
-                    {brief.nome_projeto}
-                  </h2>
-                  <p className="text-neutral-600">
-                    <span className="font-semibold">Cliente:</span> {brief.cliente}
-                  </p>
-                </div>
-                <Link
-                  href={`/${brief.slug}`}
-                  className="mt-6 block bg-gradient-to-r from-fuchsia-600 to-pink-500 text-white py-3 px-6 rounded-xl text-center hover:opacity-90 shadow-lg"
-                >
-                  Ver Briefing →
-                </Link>
-              </div>
-            ))}
-          </div>
+                Ver Briefing →
+              </Link>
+            </div>
+          ))
+        ) : (
+          <p className="text-gray-400">Nenhum briefing encontrado.</p>
         )}
-      </main>
-
-      <style jsx global>{`
-        body {
-          margin: 0;
-          font-family: 'Inter', sans-serif;
-          background-color: #000;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-      `}</style>
-    </>
+      </div>
+    </div>
   );
 }

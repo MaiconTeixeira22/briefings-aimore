@@ -1,7 +1,11 @@
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
+
+type RoteiroItem = { tempo: string; texto: string; visual: string };
+type DirecaoArteItem = { etapa: string; composicao: string; ponto_focal: string; tipografia: string; paleta: string[] };
+type ReferenciaVisual = { nome: string; descricao: string; url: string };
 
 interface Briefing {
   nome_projeto: string;
@@ -23,22 +27,12 @@ interface Briefing {
     quebra_de_expectativa?: string;
     fechamento?: string;
   };
-  roteiro?: { tempo: string; texto: string; visual: string }[];
+  roteiro?: RoteiroItem[];
   cta?: string;
   justificativa?: string;
   hashtags?: string[];
-  direcao_arte_video?: {
-    etapa: string;
-    composicao: string;
-    ponto_focal: string;
-    tipografia: string;
-    paleta: string[];
-  }[];
-  referencias_visuais?: {
-    nome: string;
-    descricao: string;
-    url: string;
-  }[];
+  direcao_arte_video?: DirecaoArteItem[];
+  referencias_visuais?: ReferenciaVisual[];
   link_pdf?: string;
 }
 
@@ -168,7 +162,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
                   <p>{briefing.diferenciais}</p>
                 </div>
               )}
-              {briefing.itens_a_evitar?.length > 0 && (
+              {Array.isArray(briefing.itens_a_evitar) && briefing.itens_a_evitar.length > 0 && (
                 <div className="block">
                   <h3>Itens a Evitar</h3>
                   <ul>
@@ -210,7 +204,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
           </section>
 
           {/* Roteiro */}
-          {briefing.roteiro?.length > 0 && (
+          {Array.isArray(briefing.roteiro) && briefing.roteiro.length > 0 && (
             <section className="section">
               <h2 className="subtitle">Roteiro</h2>
               <div className="table-container">
@@ -223,7 +217,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
                     </tr>
                   </thead>
                   <tbody>
-                    {briefing.roteiro.map((r: any, idx: number) => (
+                    {briefing.roteiro.map((r: RoteiroItem, idx: number) => (
                       <tr key={idx}>
                         <td>{r.tempo}</td>
                         <td>{r.texto}</td>
@@ -237,7 +231,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
           )}
 
           {/* CTA e Distribuição */}
-          {(briefing.cta || briefing.justificativa || briefing.hashtags?.length > 0) && (
+          {(briefing.cta || briefing.justificativa || (Array.isArray(briefing.hashtags) && briefing.hashtags.length > 0)) && (
             <section className="section">
               <h2 className="subtitle">CTA e Distribuição</h2>
               <div className="grid">
@@ -253,7 +247,7 @@ export default function SlugPage({ briefing }: SlugPageProps) {
                     <p>{briefing.justificativa}</p>
                   </div>
                 )}
-                {briefing.hashtags?.length > 0 && (
+                {Array.isArray(briefing.hashtags) && briefing.hashtags.length > 0 && (
                   <div className="block">
                     <h3>Hashtags</h3>
                     {briefing.hashtags.map((h: string, idx: number) => (
@@ -266,11 +260,11 @@ export default function SlugPage({ briefing }: SlugPageProps) {
           )}
 
           {/* Direção de Arte */}
-          {briefing.direcao_arte_video?.length > 0 && (
+          {Array.isArray(briefing.direcao_arte_video) && briefing.direcao_arte_video.length > 0 && (
             <section className="section">
               <h2 className="subtitle">Direção de Arte para Vídeo</h2>
               <div className="grid">
-                {briefing.direcao_arte_video.map((d: any, idx: number) => (
+                {briefing.direcao_arte_video.map((d: DirecaoArteItem, idx: number) => (
                   <div key={idx} className="block">
                     <p><b>Etapa:</b> {d.etapa}</p>
                     <p><b>Composição:</b> {d.composicao}</p>
@@ -294,11 +288,11 @@ export default function SlugPage({ briefing }: SlugPageProps) {
           )}
 
           {/* Referências Visuais */}
-          {briefing.referencias_visuais?.length > 0 && (
+          {Array.isArray(briefing.referencias_visuais) && briefing.referencias_visuais.length > 0 && (
             <section className="section">
               <h2 className="subtitle">Referências Visuais</h2>
               <div className="grid">
-                {briefing.referencias_visuais.map((ref: any, idx: number) => (
+                {briefing.referencias_visuais.map((ref: ReferenciaVisual, idx: number) => (
                   <a
                     key={idx}
                     href={ref.url}
