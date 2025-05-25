@@ -1,0 +1,130 @@
+/* briefing.css */
+
+body {
+  background-color: #121212;
+  color: #F2F2F2;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  padding: 80px 60px;
+}
+
+h1 {
+  font-size: 4rem;
+  background: linear-gradient(90deg, #A36BF2, #FF5B9F);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0;
+  color: #F4F4F5;
+  font-size: 1.3rem;
+}
+
+a.download-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #FF5B9F;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.col {
+  flex: 1 1 340px;
+  background-color: #1E1E1E;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(163,107,242,0.3);
+  transition: all 0.3s ease;
+}
+
+.col:hover {
+  box-shadow: 0 0 16px rgba(255,91,159,0.6);
+}
+
+.table-container {
+  flex: 2 1 500px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #CCC;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid #444;
+}
+
+td {
+  padding: 4px 8px;
+  vertical-align: top;
+  border-bottom: 1px solid #222;
+}
+
+td:first-child {
+  color: #FF5B9F;
+  font-weight: 600;
+}
+
+td:last-child {
+  color: #A36BF2;
+}
+
+.tag {
+  background: #A36BF2;
+  border-radius: 6px;
+  padding: 4px 10px;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.palette {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 3px;
+  border: 1px solid #444;
+}
+
+.reference {
+  background: #232323;
+  border-radius: 8px;
+  padding: 14px 20px;
+  box-shadow: 0 0 8px rgba(163,107,242,0.15);
+}
+
+.reference-title {
+  color: #A36BF2;
+  font-weight: 600;
+}
+
+.reference a {
+  color: #FF5B9F;
+  text-decoration: underline;
+  word-break: break-word;
+}
