@@ -1,59 +1,74 @@
-import { GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 
-export default function BriefingPage({ data }: any) {
-  if (!data) {
-    return <div style={{ textAlign: 'center', padding: '80px' }}>🚫 Briefing não encontrado.</div>;
-  }
-
-  return (
-    <div style={{ maxWidth: '980px', margin: '0 auto', padding: '48px' }}>
-      <h1 style={{ color: '#FF5B9F' }}>{data.nome_projeto}</h1>
-      <p><strong>Cliente:</strong> {data.cliente}</p>
-      <p><strong>Segmento:</strong> {data.segmento}</p>
-      <p><strong>Tipo de Peça:</strong> {data.tipo_de_peca}</p>
-      <p><strong>Formato:</strong> {data.formato_da_peca}</p>
-      <p><strong>Objetivo:</strong> {data.objetivo}</p>
-      <p><strong>Mensagem Principal:</strong> {data.mensagem_principal}</p>
-
-      <div style={{ textAlign: 'center', margin: '40px 0' }}>
-        <a 
-          href={data.webViewLink} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ 
-            backgroundColor: '#FF5B9F', 
-            color: '#fff', 
-            padding: '12px 24px', 
-            borderRadius: '8px', 
-            textDecoration: 'none', 
-            display: 'inline-block' 
-          }}
-        >
-          📄 Baixar PDF
-        </a>
-      </div>
-    </div>
-  );
+interface BriefingData {
+  nome_projeto: string;
+  cliente: string;
+  mensagem_principal: string;
+  objetivo: string;
+  slug: string;
+  cta: string;
+  webContentLink?: string;
 }
 
-// 🚀 Função que carrega os dados com base no slug da URL
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { slug } = context.params as { slug: string };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const files = fs.readdirSync(path.join(process.cwd(), 'public/json'));
 
-  const filePath = path.join(process.cwd(), 'public', 'json', `${slug}.json`);
-  
-  try {
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(fileContents);
+  const paths = files.map((file) => ({
+    params: { slug: file.replace('.json', '') },
+  }));
 
-    return {
-      props: { data },
-    };
-  } catch (error) {
-    return {
-      props: { data: null },
-    };
-  }
+  return {
+    paths,
+    fallback: false,
+  };
 };
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string;
+  const filePath = path.join(process.cwd(), 'public/json', `${slug}.json`);
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const data: BriefingData = JSON.parse(fileContent);
+
+  return {
+    props: { data },
+  };
+};
+
+export default function BriefingPage({ data }: { data: BriefingData }) {
+  return (
+    <>
+      <Head>
+        <title>{data.nome_projeto} - {data.cliente}</title>
+      </Head>
+      <main style={{ padding: '40px' }}>
+        <h1>{data.nome_projeto}</h1>
+        <h2>{data.cliente}</h2>
+        <p><strong>Mensagem Principal:</strong> {data.mensagem_principal}</p>
+        <p><strong>Objetivo:</strong> {data.objetivo}</p>
+        <p><strong>CTA:</strong> {data.cta}</p>
+
+        {data.webContentLink && (
+          <a 
+            href={data.webContentLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-block', 
+              marginTop: '20px', 
+              padding: '10px 20px', 
+              backgroundColor: '#000', 
+              color: '#fff', 
+              textDecoration: 'none',
+              borderRadius: '5px'
+            }}
+          >
+            Download PDF
+          </a>
+        )}
+      </main>
+    </>
+  );
+}
