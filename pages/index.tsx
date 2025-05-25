@@ -1,24 +1,16 @@
+import { GetServerSideProps } from 'next';
+import Link from 'next/link';
+
 type Briefing = {
   slug: string;
   title: string;
 };
 
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+type Props = {
+  briefings: Briefing[];
+};
 
-export default function Home() {
-  const [briefings, setBriefings] = useState<Briefing[]>([]);
-
-  useEffect(() => {
-    const fetchBriefings = async () => {
-      const response = await fetch('/json/index.json');
-      const data = (await response.json()) as Briefing[];
-      setBriefings(data);
-    };
-
-    fetchBriefings();
-  }, []);
-
+export default function Home({ briefings }: Props) {
   return (
     <div className="min-h-screen bg-[#121212] text-white px-6 py-10">
       <header className="flex justify-between items-center mb-10 sticky top-0 bg-[#121212] z-50 shadow-md p-4 rounded-xl">
@@ -58,3 +50,23 @@ export default function Home() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const res = await fetch('https://briefings-aimore.vercel.app/json/index.json');
+  
+  if (!res.ok) {
+    return {
+      props: {
+        briefings: [],
+      },
+    };
+  }
+
+  const briefings = await res.json();
+
+  return {
+    props: {
+      briefings,
+    },
+  };
+};
