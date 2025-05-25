@@ -11,47 +11,39 @@ interface Briefing {
 
 export async function getStaticProps() {
   const dirPath = path.join(process.cwd(), 'public/json');
-  let files: string[] = [];
+  const briefings: Briefing[] = [];
 
   try {
-    if (fs.existsSync(dirPath)) {
-      files = fs.readdirSync(dirPath);
-    } else {
-      console.warn('⚠️ A pasta public/json não foi encontrada.');
+    const files = fs.readdirSync(dirPath).filter(file => file.endsWith('.json') && !file.startsWith('.'));
+
+    for (const file of files) {
+      const filePath = path.join(dirPath, file);
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+      if (!fileContent) {
+        console.warn(`⚠️ Arquivo ${file} está vazio.`);
+        continue;
+      }
+
+      try {
+        const data = JSON.parse(fileContent);
+
+        if (data && data.nome_projeto && data.cliente && data.slug) {
+          briefings.push({
+            nome_projeto: data.nome_projeto,
+            cliente: data.cliente,
+            slug: data.slug,
+          });
+        } else {
+          console.warn(`⚠️ Dados incompletos no arquivo ${file}.`);
+        }
+      } catch (error) {
+        console.error(`❌ Erro ao processar ${file}:`, error);
+      }
     }
   } catch (err) {
     console.error('❌ Erro ao ler a pasta public/json:', err);
   }
-
-  const briefings: Briefing[] = files
-    .filter(filename => filename.endsWith('.json'))
-    .map((filename) => {
-      try {
-        const filePath = path.join(dirPath, filename);
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
-
-        if (!fileContent) {
-          console.warn(`⚠️ Arquivo ${filename} está vazio.`);
-          return null;
-        }
-
-        const data = JSON.parse(fileContent);
-
-        if (!data || !data.nome_projeto || !data.cliente || !data.slug) {
-          console.warn(`⚠️ Arquivo ${filename} está com dados incompletos.`);
-        }
-
-        return {
-          nome_projeto: data.nome_projeto || 'Sem nome',
-          cliente: data.cliente || 'Sem cliente',
-          slug: data.slug || filename.replace('.json', ''),
-        };
-      } catch (error) {
-        console.error(`❌ Erro ao processar ${filename}:`, error);
-        return null;
-      }
-    })
-    .filter((item): item is Briefing => item !== null);
 
   return {
     props: { briefings },
@@ -59,9 +51,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ briefings }: { briefings: Briefing[] }) {
-  if (briefings.length === 0) {
-    console.warn('⚠️ Nenhum briefing encontrado na pasta public/json');
-  }
   return (
     <>
       <Head>
