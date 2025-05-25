@@ -1,55 +1,59 @@
 import { GetServerSideProps } from 'next';
-import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
 
-export default function BriefingPage({ htmlContent }: { htmlContent: string }) {
+export default function BriefingPage({ data }: any) {
+  if (!data) {
+    return <div style={{ textAlign: 'center', padding: '80px' }}>🚫 Briefing não encontrado.</div>;
+  }
+
   return (
-    <>
-      <Head>
-        <title>Briefing | AiMore</title>
-        <meta name="description" content="Visualização do briefing gerado pela AiMore" />
-      </Head>
+    <div style={{ maxWidth: '980px', margin: '0 auto', padding: '48px' }}>
+      <h1 style={{ color: '#FF5B9F' }}>{data.nome_projeto}</h1>
+      <p><strong>Cliente:</strong> {data.cliente}</p>
+      <p><strong>Segmento:</strong> {data.segmento}</p>
+      <p><strong>Tipo de Peça:</strong> {data.tipo_de_peca}</p>
+      <p><strong>Formato:</strong> {data.formato_da_peca}</p>
+      <p><strong>Objetivo:</strong> {data.objetivo}</p>
+      <p><strong>Mensagem Principal:</strong> {data.mensagem_principal}</p>
 
-      <div className="min-h-screen bg-neutral-950 flex items-center justify-center px-4 py-10">
-        <div className="w-full max-w-5xl bg-neutral-900 border border-neutral-800 rounded-xl shadow-2xl p-10">
-          <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-white">
-              📄 Briefing - AiMore
-            </h1>
-            <p className="text-neutral-400 mt-2">
-              Detalhes completos do briefing gerado automaticamente.
-            </p>
-          </header>
-
-          <article
-            className="prose prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
-
-          <footer className="pt-10 mt-10 border-t border-neutral-800">
-            <p className="text-sm text-neutral-500 text-center">
-              Powered by <span className="font-semibold text-white">AiMore</span> • {new Date().getFullYear()}
-            </p>
-          </footer>
-        </div>
+      <div style={{ textAlign: 'center', margin: '40px 0' }}>
+        <a 
+          href={data.webViewLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ 
+            backgroundColor: '#FF5B9F', 
+            color: '#fff', 
+            padding: '12px 24px', 
+            borderRadius: '8px', 
+            textDecoration: 'none', 
+            display: 'inline-block' 
+          }}
+        >
+          📄 Baixar PDF
+        </a>
       </div>
-    </>
+    </div>
   );
 }
 
+// 🚀 Função que carrega os dados com base no slug da URL
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { slug } = context.params as { slug: string };
 
-  const res = await fetch(
-    `https://raw.githubusercontent.com/MaiconTeixeira22/briefings-aimore/main/briefings/${slug}.html`
-  );
+  const filePath = path.join(process.cwd(), 'public', 'json', `${slug}.json`);
+  
+  try {
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const data = JSON.parse(fileContents);
 
-  if (!res.ok) {
-    return { notFound: true };
+    return {
+      props: { data },
+    };
+  } catch (error) {
+    return {
+      props: { data: null },
+    };
   }
-
-  const htmlContent = await res.text();
-
-  return {
-    props: { htmlContent }
-  };
 };
