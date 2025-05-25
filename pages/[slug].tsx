@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
 import Head from 'next/head';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
 interface Briefing {
   nome_projeto: string;
@@ -9,85 +9,94 @@ interface Briefing {
   slug: string;
 }
 
-export async function getStaticProps() {
-  const files = fs.readdirSync(path.join(process.cwd(), 'public/json'));
-
-  const briefings = files.map((filename) => {
-    const fileContent = fs.readFileSync(
-      path.join(process.cwd(), 'public/json', filename),
-      'utf-8'
-    );
-    const data = JSON.parse(fileContent);
-
-    return {
-      nome_projeto: data.nome_projeto,
-      cliente: data.cliente,
-      slug: data.slug,
-    };
-  });
-
-  return {
-    props: { briefings },
-  };
+interface SlugPageProps {
+  briefing: Briefing;
 }
 
-export default function Home({ briefings }: { briefings: Briefing[] }) {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const files = fs.readdirSync(path.join(process.cwd(), 'public/json'));
+
+  const paths = files
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => {
+      const slug = file.replace('.json', '');
+      return { params: { slug } };
+    });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params?.slug) {
+    return { notFound: true };
+  }
+
+  const filePath = path.join(process.cwd(), 'public/json', `${params.slug}.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return { notFound: true };
+  }
+
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const data = JSON.parse(fileContent);
+
+  const briefing: Briefing = {
+    nome_projeto: data.nome_projeto,
+    cliente: data.cliente,
+    slug: data.slug,
+  };
+
+  return {
+    props: { briefing },
+  };
+};
+
+export default function SlugPage({ briefing }: SlugPageProps) {
   return (
     <>
       <Head>
-        <title>Briefings AiMore</title>
+        <title>{`${briefing.nome_projeto} | AiMore Briefing`}</title>
+        <meta name="description" content={`Briefing completo do projeto ${briefing.nome_projeto} para ${briefing.cliente}`} />
       </Head>
       <main style={{
         backgroundColor: '#121212',
-        color: '#FFFFFF',
+        color: '#F2F2F2',
         minHeight: '100vh',
-        padding: '60px',
-        fontFamily: 'Arial, sans-serif'
+        padding: '80px 60px',
+        fontFamily: 'Poppins, sans-serif'
       }}>
         <h1 style={{
-          fontSize: '3rem',
-          color: '#A36BF2',
+          fontSize: '4rem',
+          background: 'linear-gradient(90deg, #A36BF2, #FF5B9F)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
           marginBottom: '20px'
         }}>
-          Briefings AiMore
+          {briefing.nome_projeto}
         </h1>
-        <p style={{
-          color: '#CCC',
-          marginBottom: '40px',
-          fontSize: '1.2rem'
-        }}>
-          Escolha um briefing abaixo para visualizar os detalhes completos.
-        </p>
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-          gap: '30px'
+          backgroundColor: '#1E1E1E',
+          padding: '20px 30px',
+          borderRadius: '12px',
+          boxShadow: '0 0 12px rgba(163,107,242,0.3)',
+          marginBottom: '20px',
+          transition: 'all 0.3s ease'
         }}>
-          {briefings.map((briefing) => (
-            <Link key={briefing.slug} href={`/${briefing.slug}`} style={{
-              backgroundColor: '#1E1E1E',
-              padding: '20px',
-              borderRadius: '10px',
-              textDecoration: 'none',
-              border: '1px solid #333'
-            }}>
-              <div>
-                <h2 style={{
-                  color: '#FFF',
-                  fontSize: '1.5rem',
-                  marginBottom: '10px'
-                }}>
-                  {briefing.nome_projeto}
-                </h2>
-                <p style={{
-                  color: '#A36BF2',
-                  fontSize: '1rem'
-                }}>
-                  Cliente: {briefing.cliente}
-                </p>
-              </div>
-            </Link>
-          ))}
+          <h2 style={{ margin: 0, color: '#F4F4F5', fontSize: '1.8rem' }}>Cliente</h2>
+          <p style={{ margin: '8px 0 0', color: '#CCC' }}>{briefing.cliente}</p>
+        </div>
+        <div style={{
+          backgroundColor: '#1E1E1E',
+          padding: '20px 30px',
+          borderRadius: '12px',
+          boxShadow: '0 0 12px rgba(163,107,242,0.3)',
+          transition: 'all 0.3s ease'
+        }}>
+          <h2 style={{ margin: 0, color: '#F4F4F5', fontSize: '1.8rem' }}>Slug</h2>
+          <p style={{ margin: '8px 0 0', color: '#999' }}>{briefing.slug}</p>
         </div>
       </main>
     </>
