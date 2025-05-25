@@ -14,35 +14,34 @@ export async function getStaticProps() {
   const briefings: Briefing[] = [];
 
   try {
-    const files = fs.readdirSync(dirPath).filter(file => file.endsWith('.json') && !file.startsWith('.'));
+    const files = fs.readdirSync(dirPath).filter(file => file.endsWith('.json'));
 
-    for (const file of files) {
+    files.forEach(file => {
       const filePath = path.join(dirPath, file);
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const content = fs.readFileSync(filePath, 'utf-8');
 
-      if (!fileContent) {
-        console.warn(`⚠️ Arquivo ${file} está vazio.`);
-        continue;
-      }
+      if (content) {
+        try {
+          const data = JSON.parse(content);
 
-      try {
-        const data = JSON.parse(fileContent);
-
-        if (data && data.nome_projeto && data.cliente && data.slug) {
-          briefings.push({
-            nome_projeto: data.nome_projeto,
-            cliente: data.cliente,
-            slug: data.slug,
-          });
-        } else {
-          console.warn(`⚠️ Dados incompletos no arquivo ${file}.`);
+          if (data.nome_projeto && data.cliente && data.slug) {
+            briefings.push({
+              nome_projeto: data.nome_projeto,
+              cliente: data.cliente,
+              slug: data.slug,
+            });
+          } else {
+            console.warn(`⚠️ Dados incompletos no arquivo ${file}`);
+          }
+        } catch (error) {
+          console.error(`❌ Erro ao ler o JSON ${file}:`, error);
         }
-      } catch (error) {
-        console.error(`❌ Erro ao processar ${file}:`, error);
+      } else {
+        console.warn(`⚠️ Arquivo vazio: ${file}`);
       }
-    }
-  } catch (err) {
-    console.error('❌ Erro ao ler a pasta public/json:', err);
+    });
+  } catch (error) {
+    console.error('❌ Erro ao acessar a pasta public/json:', error);
   }
 
   return {
@@ -54,8 +53,8 @@ export default function Home({ briefings }: { briefings: Briefing[] }) {
   return (
     <>
       <Head>
-        <title>Briefings - AiMore Plataforma</title>
-        <meta name="description" content="Acompanhe e visualize todos os briefings criados na plataforma AiMore. Acesso rápido, organizado e prático." />
+        <title>{`Briefings - AiMore`}</title>
+        <meta name="description" content="Acompanhe e visualize todos os briefings gerados na plataforma AiMore." />
       </Head>
       <main style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
         <h1 style={{ textAlign: 'center' }}>📑 Briefings Gerados</h1>
