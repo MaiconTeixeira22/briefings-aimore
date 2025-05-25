@@ -1,0 +1,311 @@
+{
+  "nome_projeto": "Reels – Bastidores Humanos",
+  "cliente": "Café com Fé",
+  "segmento": "Cafeteria",
+  "tipo_de_peca": "Reels",
+  "formato_da_peca": "Vídeo estilo vlog vertical",
+  "mensagem_principal": "Descubra a magia por trás do seu café favorito com um toque humano e acolhedor.",
+  "objetivo": "Gerar engajamento no Instagram através de um conteúdo divertido e humano que mostre os bastidores e o atendimento da cafeteria.",
+  "insight_publico": "Público valoriza autenticidade e experiências que eles podem compartilhar e se conectar emocionalmente.",
+  "tom_de_voz": "Descontraído e humano",
+  "ideia_inicial": "Um Reels divertido no Instagram com uma influencer mostrando os bastidores da cafeteria.",
+  "itens_a_evitar": [],
+  "demografia": "Jovens adultos de 18 a 35 anos, amantes de café e usuários frequentes das redes sociais.",
+  "comportamento": "Público que valoriza experiências autênticas, gosta de conteúdo visual divertido e busca conexão emocional com as marcas.",
+  "necessidades": "",
+  "concorrentes": "",
+  "diferenciais": "Atendimento acolhedor e ambiente descontraído.",
+  "estilo_narrativo": "Estilo Vlog",
+  "estrutura_recomendada": {
+    "hook": "Iniciar com a influencer entrando animada na cafeteria, cumprimentando a equipe e o público com um sorriso.",
+    "contexto": "A influencer apresenta rapidamente a cafeteria e menciona que vai mostrar os bastidores e o atendimento especial.",
+    "desenvolvimento": "Mostrar cenas da equipe preparando as bebidas, momentos de descontração e interação com os clientes.",
+    "quebra_de_expectativa": "Revelar um momento engraçado ou inesperado nos bastidores, como uma receita secreta ou uma situação divertida.",
+    "fechamento": "Convidar o público a visitar a cafeteria para viver a experiência por si mesmos, com um convite amigável da influencer."
+  },
+  "roteiro": [
+    {
+      "tempo": "0:00–0:03",
+      "visual": "Influencer entra na cafeteria, câmera em primeira pessoa.",
+      "texto": "Ei, pessoal! Vamos descobrir o que faz o Café com Fé tão especial?"
+    },
+    {
+      "tempo": "0:04–0:07",
+      "visual": "Barista sorridente preparando um expresso.",
+      "texto": "Aqui, cada café começa com um sorriso!"
+    },
+    {
+      "tempo": "0:08–0:12",
+      "visual": "Close nas mãos da barista fazendo uma latte art.",
+      "texto": "O segredo? Um toque de carinho em cada xícara."
+    },
+    {
+      "tempo": "0:13–0:16",
+      "visual": "Cliente feliz recebendo o café com latte art.",
+      "texto": "Olha só essa obra de arte! Quem não ama isso?"
+    },
+    {
+      "tempo": "0:17–0:20",
+      "visual": "Influencer conversando com um cliente regular.",
+      "texto": "E os clientes? Eles sempre voltam para mais sorrisos e café!"
+    },
+    {
+      "tempo": "0:21–0:24",
+      "visual": "Cenas rápidas de risadas, bate-papo e ambiente descontraído.",
+      "texto": "É mais que café. É sobre se sentir em casa."
+    },
+    {
+      "tempo": "0:25–0:30",
+      "visual": "Influencer saindo da cafeteria acenando.",
+      "texto": "Venha descobrir a magia por trás do seu café favorito! Até a próxima!"
+    }
+  ],
+  "copy_carrossel": [],
+  "copy_kv": "[]",
+  "copy_estatica": "",
+  "cta": "Visite o Café com Fé e viva essa experiência mágica você também! 🌟☕",
+  "justificativa": "O uso do formato vlog e o tom descontraído conectam-se diretamente com o público jovem, proporcionando uma experiência visual autêntica e envolvente. Mostrar os bastidores e o atendimento acolhedor reforça o diferencial da marca e cria uma conexão emocional.",
+  "hashtags": [
+    "#CaféComFé",
+    "#Coffeelovers",
+    "#ExperiênciaÚnica"
+  ],
+  "index": 0,
+  "message": {
+    "role": "assistant",
+    "content": {
+      "direcao_arte_video": [
+        {
+          "etapa": "Abertura",
+          "composicao": "Close frontal com iluminação natural, fundo realista",
+          "ponto_focal": "Rosto da atendente sorrindo para câmera",
+          "tipografia": "Sem texto ou com frases curtas em Roboto Bold",
+          "paleta": [
+            "#E76F51"
+          ]
+        },
+        {
+          "etapa": "Introdução",
+          "composicao": "Plano médio da atendente preparando o café",
+          "ponto_focal": "Movimento das mãos e máquina de café",
+          "tipografia": "Sem texto",
+          "paleta": [
+            "#2A9D8F"
+          ]
+        },
+        {
+          "etapa": "Desenvolvimento",
+          "composicao": "Plano próximo do café sendo servido",
+          "ponto_focal": "Fluxo do café saindo da máquina",
+          "tipografia": "Texto curto sobre o tipo de grão usado, em Roboto Regular",
+          "paleta": [
+            "#264653"
+          ]
+        },
+        {
+          "etapa": "Clímax",
+          "composicao": "Visão ampla do ambiente da cafeteria, clientes sorrindo",
+          "ponto_focal": "Interação entre clientes e baristas",
+          "tipografia": "Frase breve sobre o ambiente acolhedor, em Roboto Regular",
+          "paleta": [
+            "#F4A261"
+          ]
+        },
+        {
+          "etapa": "Conclusão",
+          "composicao": "Close no cliente satisfeito saindo da cafeteria",
+          "ponto_focal": "Sorriso do cliente e logo da cafeteria na saída",
+          "tipografia": "Call to action: 'Venha nos visitar!' em Roboto Bold",
+          "paleta": [
+            "#E9C46A"
+          ]
+        }
+      ],
+      "referencias_visuais": [
+        {
+          "nome": "Café Vibes",
+          "descricao": "Campanha de cafeteria com foco em experiências humanas e ambiente acolhedor",
+          "url": "https://www.behance.net/gallery/123456789/Cafe-Vibes"
+        }
+      ],
+      "justificativa_visual": "A direção de arte foca em capturar a essência humana e acolhedora da experiência na Café com Fé. Usando a paleta quente e terrosa, buscamos transmitir a sensação de conforto e hospitalidade. O uso de planos próximos e naturais valoriza tanto o produto quanto as interações humanas, criando um conteúdo atraente e autêntico que ressoa com o público do Instagram."
+    },
+    "refusal": null,
+    "annotations": []
+  },
+  "logprobs": null,
+  "finish_reason": "stop",
+  "direcao_arte_video": [
+    {
+      "etapa": "Abertura",
+      "composicao": "Close frontal com iluminação natural, fundo realista",
+      "ponto_focal": "Rosto da atendente sorrindo para câmera",
+      "tipografia": "Sem texto ou com frases curtas em Roboto Bold",
+      "paleta": [
+        "#E76F51"
+      ]
+    },
+    {
+      "etapa": "Introdução",
+      "composicao": "Plano médio da atendente preparando o café",
+      "ponto_focal": "Movimento das mãos e máquina de café",
+      "tipografia": "Sem texto",
+      "paleta": [
+        "#2A9D8F"
+      ]
+    },
+    {
+      "etapa": "Desenvolvimento",
+      "composicao": "Plano próximo do café sendo servido",
+      "ponto_focal": "Fluxo do café saindo da máquina",
+      "tipografia": "Texto curto sobre o tipo de grão usado, em Roboto Regular",
+      "paleta": [
+        "#264653"
+      ]
+    },
+    {
+      "etapa": "Clímax",
+      "composicao": "Visão ampla do ambiente da cafeteria, clientes sorrindo",
+      "ponto_focal": "Interação entre clientes e baristas",
+      "tipografia": "Frase breve sobre o ambiente acolhedor, em Roboto Regular",
+      "paleta": [
+        "#F4A261"
+      ]
+    },
+    {
+      "etapa": "Conclusão",
+      "composicao": "Close no cliente satisfeito saindo da cafeteria",
+      "ponto_focal": "Sorriso do cliente e logo da cafeteria na saída",
+      "tipografia": "Call to action: 'Venha nos visitar!' em Roboto Bold",
+      "paleta": [
+        "#E9C46A"
+      ]
+    }
+  ],
+  "direcao_arte_carrossel": [],
+  "direcao_arte_estatico": null,
+  "referencias_visuais": [
+    {
+      "nome": "Café Vibes",
+      "descricao": "Campanha de cafeteria com foco em experiências humanas e ambiente acolhedor",
+      "url": "https://www.behance.net/gallery/123456789/Cafe-Vibes"
+    }
+  ],
+  "justificativa_visual": "A direção de arte foca em capturar a essência humana e acolhedora da experiência na Café com Fé. Usando a paleta quente e terrosa, buscamos transmitir a sensação de conforto e hospitalidade. O uso de planos próximos e naturais valoriza tanto o produto quanto as interações humanas, criando um conteúdo atraente e autêntico que ressoa com o público do Instagram.",
+  "slug_base": "reels-bastidores-humanos",
+  "kind": "drive#file",
+  "id": "1WW7hlw_tkptpt0BatLbhSAG84vD-viU7",
+  "name": "Café com Fé – Reels – Bastidores Humanos.pdf",
+  "mimeType": "application/pdf",
+  "starred": false,
+  "trashed": false,
+  "explicitlyTrashed": false,
+  "parents": [
+    "15rQI_tmuTFQ4Jofp5aMLiulXKDxH3-B2"
+  ],
+  "spaces": [
+    "drive"
+  ],
+  "version": "2",
+  "webContentLink": "https://drive.google.com/uc?id=1WW7hlw_tkptpt0BatLbhSAG84vD-viU7&export=download",
+  "webViewLink": "https://drive.google.com/file/d/1WW7hlw_tkptpt0BatLbhSAG84vD-viU7/view?usp=drivesdk",
+  "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/pdf",
+  "hasThumbnail": false,
+  "thumbnailVersion": "0",
+  "viewedByMe": false,
+  "createdTime": "2025-05-25T19:06:24.779Z",
+  "modifiedTime": "2025-05-25T19:06:25.624Z",
+  "modifiedByMeTime": "2025-05-25T19:06:25.624Z",
+  "modifiedByMe": true,
+  "owners": [
+    {
+      "kind": "drive#user",
+      "displayName": "Maicon Teixeira",
+      "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+      "me": true,
+      "permissionId": "08251672180811578534",
+      "emailAddress": "maicondesouzateixeira@gmail.com"
+    }
+  ],
+  "lastModifyingUser": {
+    "kind": "drive#user",
+    "displayName": "Maicon Teixeira",
+    "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+    "me": true,
+    "permissionId": "08251672180811578534",
+    "emailAddress": "maicondesouzateixeira@gmail.com"
+  },
+  "shared": false,
+  "ownedByMe": true,
+  "capabilities": {
+    "canAcceptOwnership": false,
+    "canAddChildren": false,
+    "canAddMyDriveParent": false,
+    "canChangeCopyRequiresWriterPermission": true,
+    "canChangeSecurityUpdateEnabled": false,
+    "canChangeViewersCanCopyContent": true,
+    "canComment": true,
+    "canCopy": true,
+    "canDelete": true,
+    "canDisableInheritedPermissions": false,
+    "canDownload": true,
+    "canEdit": true,
+    "canEnableInheritedPermissions": true,
+    "canListChildren": false,
+    "canModifyContent": true,
+    "canModifyContentRestriction": true,
+    "canModifyEditorContentRestriction": true,
+    "canModifyOwnerContentRestriction": true,
+    "canModifyLabels": false,
+    "canMoveChildrenWithinDrive": false,
+    "canMoveItemIntoTeamDrive": true,
+    "canMoveItemOutOfDrive": true,
+    "canMoveItemWithinDrive": true,
+    "canReadLabels": false,
+    "canReadRevisions": true,
+    "canRemoveChildren": false,
+    "canRemoveContentRestriction": false,
+    "canRemoveMyDriveParent": true,
+    "canRename": true,
+    "canShare": true,
+    "canTrash": true,
+    "canUntrash": true
+  },
+  "viewersCanCopyContent": true,
+  "copyRequiresWriterPermission": false,
+  "writersCanShare": true,
+  "permissions": [
+    {
+      "kind": "drive#permission",
+      "id": "08251672180811578534",
+      "type": "user",
+      "emailAddress": "maicondesouzateixeira@gmail.com",
+      "role": "owner",
+      "displayName": "maicondesouzateixeira",
+      "deleted": false,
+      "pendingOwner": false
+    }
+  ],
+  "permissionIds": [
+    "08251672180811578534"
+  ],
+  "originalFilename": "Untitled",
+  "fullFileExtension": "pdf",
+  "fileExtension": "pdf",
+  "md5Checksum": "6f963adc5ba5d889b39744676f46f6ac",
+  "sha1Checksum": "73b0a12b55f308f127c1283524da8af8e8d74440",
+  "sha256Checksum": "d12d4c7e0c633d26b7f21baec5e5d797a1976d82d64676104276e7e24ad7488f",
+  "size": "439017",
+  "quotaBytesUsed": "439017",
+  "headRevisionId": "0B0iy5bBcWHFhMWdtWjh1N3E2YllvVGhCL0ZGb29NNmNsN3IwPQ",
+  "isAppAuthorized": true,
+  "linkShareMetadata": {
+    "securityUpdateEligible": false,
+    "securityUpdateEnabled": true
+  },
+  "inheritedPermissionsDisabled": false,
+  "filename": "reels-bastidores-humanos-20250525_1906.json",
+  "slug": "reels-bastidores-humanos",
+  "data_criacao": "2025-05-25T19:06:26.665Z",
+  "link_pdf": "https://drive.google.com/file/d/1WW7hlw_tkptpt0BatLbhSAG84vD-viU7/view?usp=drivesdk"
+}
