@@ -53,46 +53,35 @@ export default function Home({ briefings }: { briefings: Briefing[] }) {
   return (
     <>
       <Head>
-        <title>{`Briefings - AiMore`}</title>
-        <meta name="description" content="Acompanhe e visualize todos os briefings gerados na plataforma AiMore." />
+        <title>AiMore Briefings - Plataforma Premium</title>
+        <meta name="description" content="Visualize todos os briefings gerados na plataforma AiMore." />
       </Head>
-      <main style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
-        <h1 style={{ textAlign: 'center' }}>📑 Briefings Gerados</h1>
+      <main className="bg-black min-h-screen py-20 px-8">
+        <h1 className="text-center text-7xl font-extrabold bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent mb-20 tracking-tight">
+          🚀 AiMore Briefings Premium
+        </h1>
 
         {briefings.length === 0 ? (
-          <p style={{ textAlign: 'center' }}>Nenhum briefing encontrado.</p>
+          <p className="text-center text-neutral-400 text-xl">Nenhum briefing encontrado. 🚧</p>
         ) : (
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '24px',
-            marginTop: '40px'
-          }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {briefings.map((brief) => (
-              <div key={brief.slug} style={{
-                border: '1px solid #ddd',
-                borderRadius: '10px',
-                padding: '20px',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-                backgroundColor: '#fff',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-              }}>
+              <div
+                key={brief.slug}
+                className="bg-neutral-950 border border-neutral-800 rounded-3xl shadow-2xl p-8 hover:scale-[1.03] hover:border-pink-500 hover:shadow-pink-500/20 transition-all duration-300"
+              >
                 <div>
-                  <h2>{brief.nome_projeto}</h2>
-                  <p><strong>Cliente:</strong> {brief.cliente}</p>
+                  <h2 className="text-xl font-bold mb-2 text-white">
+                    {brief.nome_projeto}
+                  </h2>
+                  <p className="text-neutral-600">
+                    <span className="font-semibold">Cliente:</span> {brief.cliente}
+                  </p>
                 </div>
-                <Link href={`/${brief.slug}`} aria-label={`Ver briefing ${brief.nome_projeto}`} style={{
-                  marginTop: '16px',
-                  backgroundColor: '#111',
-                  color: '#fff',
-                  padding: '10px 16px',
-                  borderRadius: '5px',
-                  textAlign: 'center',
-                  textDecoration: 'none',
-                  display: 'block'
-                }}>
+                <Link
+                  href={`/${brief.slug}`}
+                  className="mt-6 block bg-gradient-to-r from-fuchsia-600 to-pink-500 text-white py-3 px-6 rounded-xl text-center hover:opacity-90 shadow-lg"
+                >
                   Ver Briefing →
                 </Link>
               </div>
@@ -100,6 +89,16 @@ export default function Home({ briefings }: { briefings: Briefing[] }) {
           </div>
         )}
       </main>
+
+      <style jsx global>{`
+        body {
+          margin: 0;
+          font-family: 'Inter', sans-serif;
+          background-color: #000;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      `}</style>
     </>
   );
 }
