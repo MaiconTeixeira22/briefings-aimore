@@ -1,5 +1,6 @@
-import { GetServerSideProps } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 
 type Briefing = {
   slug: string;
@@ -51,22 +52,14 @@ export default function Home({ briefings }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch('https://briefings-aimore.vercel.app/json/index.json');
-  
-  if (!res.ok) {
-    return {
-      props: {
-        briefings: [],
-      },
-    };
-  }
-
-  const briefings = await res.json();
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'public/json/index.json');
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const briefings = JSON.parse(fileContent);
 
   return {
     props: {
       briefings,
     },
   };
-};
+}
