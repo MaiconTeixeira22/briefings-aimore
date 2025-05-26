@@ -1,58 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --accent: linear-gradient(90deg, #A36BF2, #FF5B9F);
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    color-scheme: dark;
-  }
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-  height: 100%;
+/* ===== RESET PREMIUM ===== */
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  image-rendering: -webkit-optimize-contrast;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  @apply bg-[#121212] text-[#F5F5F5] antialiased;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ===== TIPOGRAFIA ===== */
+h1 {
+  @apply text-4xl font-bold;
 }
 
+h2 {
+  @apply text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-semibold;
+}
+
+h4 {
+  @apply text-xl font-semibold;
+}
+
+p {
+  @apply text-base leading-relaxed;
+}
+
+/* ===== LINKS ===== */
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply text-purple-400 hover:text-pink-500 transition-colors;
 }
 
-.gradient-title {
-  background: var(--accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+/* ===== BOTÕES GLOBAIS ===== */
+.btn {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-md text-sm font-medium hover:opacity-80 transition;
+}
+
+/* ===== CARD PADRÃO ===== */
+.card {
+  @apply border border-neutral-800 rounded-xl p-6 hover:border-pink-500 hover:scale-[1.02] transition-all;
+}
+
+/* ===== DIVISOR ===== */
+.divider {
+  @apply border-t border-neutral-800 my-6;
+}
+
+/* ===== TABELAS ===== */
+table {
+  @apply w-full table-auto border-collapse;
+}
+
+thead {
+  @apply bg-neutral-900;
+}
+
+th {
+  @apply px-4 py-3 text-left text-neutral-400 font-medium border-b border-neutral-800;
+}
+
+td {
+  @apply px-4 py-3 border-b border-neutral-800;
+}
+
+tr:nth-child(even) {
+  @apply bg-neutral-950;
+}
+
+tr:hover {
+  @apply bg-neutral-900;
+}
+
+/* ===== TAGS / BADGES ===== */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-neutral-800 text-neutral-300;
+}
+
+.badge-gradient {
+  @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white;
+}
+
+/* ===== SCROLLBAR CUSTOM ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* ===== LISTAS ===== */
+ul {
+  @apply list-disc list-inside space-y-2;
+}
+
+ol {
+  @apply list-decimal list-inside space-y-2;
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea,
+select {
+  @apply bg-neutral-900 border border-neutral-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  @apply border-t border-neutral-800 mt-12 pt-6 pb-12 text-center text-sm text-neutral-500;
 }
