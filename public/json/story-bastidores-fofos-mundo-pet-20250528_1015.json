@@ -1,0 +1,212 @@
+{
+  "nome_projeto": "Story – Bastidores Fofos Mundo Pet",
+  "cliente": "Mundo Pet",
+  "segmento": "Pet Shop e Clínica Veterinária",
+  "tipo_de_peca": "Story (Imagem)",
+  "formato_da_peca": "Imagem de bastidores do banho e tosa para Instagram Stories",
+  "mensagem_principal": "Os bastidores do banho e tosa são divertidos e acolhedores, assim como nossos serviços!",
+  "objetivo": "Divulgar os serviços de banho e tosa destacando o ambiente acolhedor e profissional, aumentando o engajamento no Instagram.",
+  "insight_publico": "Público adora ver os bastidores das atividades do dia a dia dos pets, especialmente em um ambiente onde eles se sentem bem cuidados.",
+  "tom_de_voz": "Leve, natural e próximo do público",
+  "ideia_inicial": "Mostrar cenas dos bastidores do banho e tosa com pets fofos em momentos espontâneos e divertidos.",
+  "itens_a_evitar": [
+    "Evitar imagens que possam sugerir desconforto dos pets",
+    "Evitar textos longos ou complexos"
+  ],
+  "demografia": "Proprietários de pets de todas as idades, especialmente jovens adultos e famílias que valorizam cuidados de qualidade para seus animais.",
+  "comportamento": "Usuários de redes sociais que buscam conteúdo leve e divertido, apaixonados por animais e interessados em serviços de qualidade para seus pets.",
+  "necessidades": "",
+  "concorrentes": "",
+  "diferenciais": "Ambiente acolhedor, equipe carinhosa e profissional, serviço de qualidade.",
+  "estilo_narrativo": "-",
+  "estrutura_recomendada": {
+    "hook": "",
+    "contexto": "",
+    "desenvolvimento": "",
+    "quebra_de_expectativa": "",
+    "fechamento": ""
+  },
+  "roteiro": [],
+  "copy_carrossel": [],
+  "copy_kv": "[]",
+  "copy_estatica": "Descubra a diversão nos bastidores! 🐾✨",
+  "cta": "Veja como nossos serviços de banho e tosa são acolhedores e profissionais!",
+  "justificativa": "A estrutura da copy é direta e visualmente impactante, destacando a diversão e o acolhimento nos bastidores do banho e tosa. Isso ressoa com o público que valoriza conteúdo leve e divertido, além de demonstrar o cuidado que a Mundo Pet oferece aos animais. O uso de emojis complementa o tom leve e próximo, essencial para engajamento no Instagram.",
+  "hashtags": [
+    "#MundoPet",
+    "#CuidadosComPets",
+    "#BanhoETosa"
+  ],
+  "index": 0,
+  "message": {
+    "role": "assistant",
+    "content": {
+      "direcao_arte_estatico": {
+        "paleta": [
+          "#F0E68C",
+          "#FFD700",
+          "#FFFFFF"
+        ],
+        "composicao": "Imagem mostrando um cachorro molhado e feliz sendo secado por um profissional sorridente. Fundo desfocado de um ambiente de banho e tosa limpo e bem iluminado, transmitindo acolhimento.",
+        "ponto_focal": "Rosto do cachorro sorridente e a interação amigável com o profissional",
+        "tipografia": "Título em bold com a frase 'Banho e Tosa com Amor!', texto de apoio menor dizendo 'Descubra nossos serviços acolhedores'.",
+        "elementos_adicionais": [
+          "emoji de pata 🐾",
+          "ícone de coração"
+        ]
+      },
+      "referencias_visuais": [
+        {
+          "nome": "Pet Care Fun",
+          "descricao": "Ambiente acolhedor e divertido com pets felizes e staff amigável",
+          "url": "https://www.behance.net/gallery/123456789/Pet-Care-Fun"
+        }
+      ],
+      "justificativa_visual": "A direção de arte foi desenvolvida para transmitir um ambiente acolhedor e profissional, destacando a experiência positiva dos pets durante o banho e tosa. A paleta de cores quentes e alegres reflete o tom de voz leve e próximo do público, enquanto a composição foca na interação amistosa entre o pet e o profissional, reforçando a mensagem principal da campanha. Elementos visuais como emojis ajudam a criar uma ligação emocional com o público, mantendo o engajamento no Instagram."
+    },
+    "refusal": null,
+    "annotations": []
+  },
+  "logprobs": null,
+  "finish_reason": "stop",
+  "direcao_arte_video": [],
+  "direcao_arte_carrossel": [],
+  "direcao_arte_estatico": {
+    "paleta": [
+      "#F0E68C",
+      "#FFD700",
+      "#FFFFFF"
+    ],
+    "composicao": "Imagem mostrando um cachorro molhado e feliz sendo secado por um profissional sorridente. Fundo desfocado de um ambiente de banho e tosa limpo e bem iluminado, transmitindo acolhimento.",
+    "ponto_focal": "Rosto do cachorro sorridente e a interação amigável com o profissional",
+    "tipografia": "Título em bold com a frase 'Banho e Tosa com Amor!', texto de apoio menor dizendo 'Descubra nossos serviços acolhedores'.",
+    "elementos_adicionais": [
+      "emoji de pata 🐾",
+      "ícone de coração"
+    ]
+  },
+  "referencias_visuais": [
+    {
+      "nome": "Pet Care Fun",
+      "descricao": "Ambiente acolhedor e divertido com pets felizes e staff amigável",
+      "url": "https://www.behance.net/gallery/123456789/Pet-Care-Fun"
+    }
+  ],
+  "justificativa_visual": "A direção de arte foi desenvolvida para transmitir um ambiente acolhedor e profissional, destacando a experiência positiva dos pets durante o banho e tosa. A paleta de cores quentes e alegres reflete o tom de voz leve e próximo do público, enquanto a composição foca na interação amistosa entre o pet e o profissional, reforçando a mensagem principal da campanha. Elementos visuais como emojis ajudam a criar uma ligação emocional com o público, mantendo o engajamento no Instagram.",
+  "slug_base": "story-bastidores-fofos-mundo-pet",
+  "kind": "drive#file",
+  "id": "1oK_9WIu6WvQyfVC5jP5k5ru8kA-rDUwf",
+  "name": "Mundo Pet – Story – Bastidores Fofos Mundo Pet.pdf",
+  "mimeType": "application/pdf",
+  "starred": false,
+  "trashed": false,
+  "explicitlyTrashed": false,
+  "parents": [
+    "15rQI_tmuTFQ4Jofp5aMLiulXKDxH3-B2"
+  ],
+  "spaces": [
+    "drive"
+  ],
+  "version": "2",
+  "webContentLink": "https://drive.google.com/uc?id=1oK_9WIu6WvQyfVC5jP5k5ru8kA-rDUwf&export=download",
+  "webViewLink": "https://drive.google.com/file/d/1oK_9WIu6WvQyfVC5jP5k5ru8kA-rDUwf/view?usp=drivesdk",
+  "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/pdf",
+  "hasThumbnail": false,
+  "thumbnailVersion": "0",
+  "viewedByMe": false,
+  "createdTime": "2025-05-28T10:15:13.481Z",
+  "modifiedTime": "2025-05-28T10:15:14.362Z",
+  "modifiedByMeTime": "2025-05-28T10:15:14.362Z",
+  "modifiedByMe": true,
+  "owners": [
+    {
+      "kind": "drive#user",
+      "displayName": "Maicon Teixeira",
+      "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+      "me": true,
+      "permissionId": "08251672180811578534",
+      "emailAddress": "maicondesouzateixeira@gmail.com"
+    }
+  ],
+  "lastModifyingUser": {
+    "kind": "drive#user",
+    "displayName": "Maicon Teixeira",
+    "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+    "me": true,
+    "permissionId": "08251672180811578534",
+    "emailAddress": "maicondesouzateixeira@gmail.com"
+  },
+  "shared": false,
+  "ownedByMe": true,
+  "capabilities": {
+    "canAcceptOwnership": false,
+    "canAddChildren": false,
+    "canAddMyDriveParent": false,
+    "canChangeCopyRequiresWriterPermission": true,
+    "canChangeSecurityUpdateEnabled": false,
+    "canChangeViewersCanCopyContent": true,
+    "canComment": true,
+    "canCopy": true,
+    "canDelete": true,
+    "canDisableInheritedPermissions": false,
+    "canDownload": true,
+    "canEdit": true,
+    "canEnableInheritedPermissions": true,
+    "canListChildren": false,
+    "canModifyContent": true,
+    "canModifyContentRestriction": true,
+    "canModifyEditorContentRestriction": true,
+    "canModifyOwnerContentRestriction": true,
+    "canModifyLabels": false,
+    "canMoveChildrenWithinDrive": false,
+    "canMoveItemIntoTeamDrive": true,
+    "canMoveItemOutOfDrive": true,
+    "canMoveItemWithinDrive": true,
+    "canReadLabels": false,
+    "canReadRevisions": true,
+    "canRemoveChildren": false,
+    "canRemoveContentRestriction": false,
+    "canRemoveMyDriveParent": true,
+    "canRename": true,
+    "canShare": true,
+    "canTrash": true,
+    "canUntrash": true
+  },
+  "viewersCanCopyContent": true,
+  "copyRequiresWriterPermission": false,
+  "writersCanShare": true,
+  "permissions": [
+    {
+      "kind": "drive#permission",
+      "id": "08251672180811578534",
+      "type": "user",
+      "emailAddress": "maicondesouzateixeira@gmail.com",
+      "role": "owner",
+      "displayName": "maicondesouzateixeira",
+      "deleted": false,
+      "pendingOwner": false
+    }
+  ],
+  "permissionIds": [
+    "08251672180811578534"
+  ],
+  "originalFilename": "Untitled",
+  "fullFileExtension": "pdf",
+  "fileExtension": "pdf",
+  "md5Checksum": "7c6322155c5d27e8b306457ffd1e2128",
+  "sha1Checksum": "60ea856eb88ef56de27bf30485952415fc5a3698",
+  "sha256Checksum": "986bc20b15daa6f39887e1b0060494390055410afd3148d755e91f94f516999a",
+  "size": "270421",
+  "quotaBytesUsed": "270421",
+  "headRevisionId": "0B0iy5bBcWHFhZTRjTkt1UW81RWxEZWtKU01aYUZzZ215YzMwPQ",
+  "isAppAuthorized": true,
+  "linkShareMetadata": {
+    "securityUpdateEligible": false,
+    "securityUpdateEnabled": true
+  },
+  "inheritedPermissionsDisabled": false,
+  "filename": "story-bastidores-fofos-mundo-pet-20250528_1015.json",
+  "slug": "story-bastidores-fofos-mundo-pet",
+  "data_criacao": "2025-05-28T10:15:15.297Z",
+  "link_pdf": "https://drive.google.com/file/d/1oK_9WIu6WvQyfVC5jP5k5ru8kA-rDUwf/view?usp=drivesdk"
+}
