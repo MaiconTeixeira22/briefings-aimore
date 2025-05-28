@@ -17,9 +17,12 @@ interface RoteiroItem {
   texto: string;
 }
 
-export const metadata: Metadata = {
-  title: 'Briefing | AiMore Briefings',
-};
+
+export async function generateMetadata({ params }: Props) {
+  return {
+    title: `Briefing | ${params.slug}`,
+  };
+}
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const res = await fetch('http://localhost:3000/json/index.json');
