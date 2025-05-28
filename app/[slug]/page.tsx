@@ -25,13 +25,7 @@ export async function generateStaticParams() {
   }));
 }
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const res = await fetch(`http://localhost:3000/json/${params.slug}.json`);
   const briefing = await res.json();
 
