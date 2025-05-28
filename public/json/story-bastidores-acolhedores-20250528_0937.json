@@ -1,0 +1,222 @@
+{
+  "nome_projeto": "Story – Bastidores Acolhedores",
+  "cliente": "Mundo Pet",
+  "segmento": "Pet Shop e Clínica Veterinária",
+  "tipo_de_peca": "Story (Imagem)",
+  "formato_da_peca": "Imagem divertida e acolhedora para Instagram Stories, mostrando os bastidores do banho e tosa.",
+  "mensagem_principal": "Descubra o cuidado e carinho nos bastidores do nosso banho e tosa, onde cada pet é tratado como parte da família.",
+  "objetivo": "Divulgar os serviços de banho e tosa da Mundo Pet no Instagram, criando uma conexão emocional com o público.",
+  "insight_publico": "O público valoriza ver o cuidado que seus pets recebem e se sente mais confiante ao ver a transparência dos serviços.",
+  "tom_de_voz": "Divertido, acolhedor e próximo",
+  "ideia_inicial": "Story divertido e acolhedor mostrando os bastidores do banho e tosa, com pets fofos.",
+  "itens_a_evitar": [
+    "Não usar imagens com qualidade baixa.",
+    "Evitar fotos que possam parecer desorganizadas ou não profissionais."
+  ],
+  "demografia": "Proprietários de pets de várias idades, com foco em adultos jovens (25-40 anos) que buscam serviços de qualidade e carinho para seus animais.",
+  "comportamento": "Usuários ativos no Instagram, que valorizam experiências autênticas e têm interesse em cuidar bem de seus pets.",
+  "necessidades": "",
+  "concorrentes": "",
+  "diferenciais": "Ambiente acolhedor e cuidado personalizado com cada pet.",
+  "estilo_narrativo": "-",
+  "estrutura_recomendada": {
+    "hook": "",
+    "contexto": "",
+    "desenvolvimento": "",
+    "quebra_de_expectativa": "",
+    "fechamento": ""
+  },
+  "roteiro": [],
+  "copy_carrossel": [],
+  "copy_kv": "[]",
+  "copy_estatica": "Nos bastidores do nosso banho e tosa, cada pet é tratado como parte da família. 🐾✨ Descubra o carinho que faz a diferença!",
+  "cta": "Visite nossos Stories e veja de perto todo esse cuidado. 🛁🐶❤️",
+  "justificativa": "Essa estrutura e copy são ideais para o público-alvo, que valoriza o cuidado especial e transparente com seus pets. Uma imagem divertida e acolhedora, acompanhada de uma mensagem clara, cria uma conexão emocional direta e convida o público a explorar mais sobre os serviços oferecidos.",
+  "hashtags": [
+    "#MundoPet",
+    "#BanhoeTosa",
+    "#CuidadoComAmor"
+  ],
+  "index": 0,
+  "message": {
+    "role": "assistant",
+    "content": {
+      "direcao_arte_estatico": {
+        "paleta": [
+          "#F4A261",
+          "#2A9D8F",
+          "#E9C46A"
+        ],
+        "composicao": "Imagem central mostrando um pet feliz sendo seco com uma toalha colorida e macia, cercado por acessórios de banho como escovas e shampoos, tudo em um ambiente acolhedor e bem iluminado.",
+        "ponto_focal": "O rosto do pet com expressão alegre",
+        "tipografia": "Título em bold com fonte divertida, subtítulo em regular",
+        "elementos_adicionais": [
+          "emoji de pata 🐾",
+          "ícone de coração ❤️"
+        ]
+      },
+      "referencias_visuais": [
+        {
+          "nome": "Pet Care Campaign",
+          "descricao": "Visual colorido e acolhedor com pets em destaque",
+          "url": "https://www.behance.net/gallery/89502347/Pet-Care-Campaign"
+        },
+        {
+          "nome": "Happy Pets",
+          "descricao": "Imagens de animais de estimação felizes em ambientes calmantes",
+          "url": "https://www.behance.net/gallery/102453821/Happy-Pets"
+        }
+      ],
+      "justificativa_visual": "Para criar uma conexão emocional e visual acolhedora, optamos por uma paleta de cores quentes e amigáveis, que transmite carinho e cuidado. A imagem central de um pet feliz e as expressões alegres destacam a mensagem de amor e atenção que o serviço de banho e tosa da Mundo Pet oferece. Elementos adicionais, como emojis de pata e coração, reforçam a sensação de proximidade e carinho. A composição é pensada para ser clara e focada, destacando o ambiente organizado e profissional, alinhado ao tom divertido e acolhedor desejado pelo cliente."
+    },
+    "refusal": null,
+    "annotations": []
+  },
+  "logprobs": null,
+  "finish_reason": "stop",
+  "direcao_arte_video": [],
+  "direcao_arte_carrossel": [],
+  "direcao_arte_estatico": {
+    "paleta": [
+      "#F4A261",
+      "#2A9D8F",
+      "#E9C46A"
+    ],
+    "composicao": "Imagem central mostrando um pet feliz sendo seco com uma toalha colorida e macia, cercado por acessórios de banho como escovas e shampoos, tudo em um ambiente acolhedor e bem iluminado.",
+    "ponto_focal": "O rosto do pet com expressão alegre",
+    "tipografia": "Título em bold com fonte divertida, subtítulo em regular",
+    "elementos_adicionais": [
+      "emoji de pata 🐾",
+      "ícone de coração ❤️"
+    ]
+  },
+  "referencias_visuais": [
+    {
+      "nome": "Pet Care Campaign",
+      "descricao": "Visual colorido e acolhedor com pets em destaque",
+      "url": "https://www.behance.net/gallery/89502347/Pet-Care-Campaign"
+    },
+    {
+      "nome": "Happy Pets",
+      "descricao": "Imagens de animais de estimação felizes em ambientes calmantes",
+      "url": "https://www.behance.net/gallery/102453821/Happy-Pets"
+    }
+  ],
+  "justificativa_visual": "Para criar uma conexão emocional e visual acolhedora, optamos por uma paleta de cores quentes e amigáveis, que transmite carinho e cuidado. A imagem central de um pet feliz e as expressões alegres destacam a mensagem de amor e atenção que o serviço de banho e tosa da Mundo Pet oferece. Elementos adicionais, como emojis de pata e coração, reforçam a sensação de proximidade e carinho. A composição é pensada para ser clara e focada, destacando o ambiente organizado e profissional, alinhado ao tom divertido e acolhedor desejado pelo cliente.",
+  "slug_base": "story-bastidores-acolhedores",
+  "kind": "drive#file",
+  "id": "1J72al9cU1kIyarwpeiik5WWn_ybpcaVA",
+  "name": "Mundo Pet – Story – Bastidores Acolhedores.pdf",
+  "mimeType": "application/pdf",
+  "starred": false,
+  "trashed": false,
+  "explicitlyTrashed": false,
+  "parents": [
+    "15rQI_tmuTFQ4Jofp5aMLiulXKDxH3-B2"
+  ],
+  "spaces": [
+    "drive"
+  ],
+  "version": "2",
+  "webContentLink": "https://drive.google.com/uc?id=1J72al9cU1kIyarwpeiik5WWn_ybpcaVA&export=download",
+  "webViewLink": "https://drive.google.com/file/d/1J72al9cU1kIyarwpeiik5WWn_ybpcaVA/view?usp=drivesdk",
+  "iconLink": "https://drive-thirdparty.googleusercontent.com/16/type/application/pdf",
+  "hasThumbnail": false,
+  "thumbnailVersion": "0",
+  "viewedByMe": false,
+  "createdTime": "2025-05-28T09:37:21.280Z",
+  "modifiedTime": "2025-05-28T09:37:22.237Z",
+  "modifiedByMeTime": "2025-05-28T09:37:22.237Z",
+  "modifiedByMe": true,
+  "owners": [
+    {
+      "kind": "drive#user",
+      "displayName": "Maicon Teixeira",
+      "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+      "me": true,
+      "permissionId": "08251672180811578534",
+      "emailAddress": "maicondesouzateixeira@gmail.com"
+    }
+  ],
+  "lastModifyingUser": {
+    "kind": "drive#user",
+    "displayName": "Maicon Teixeira",
+    "photoLink": "https://lh3.googleusercontent.com/a/ACg8ocIQP_SbNA1QZ_70LfkTuc70YFHUJ7SuX1DOf_QRbY53KZMxSkolag=s64",
+    "me": true,
+    "permissionId": "08251672180811578534",
+    "emailAddress": "maicondesouzateixeira@gmail.com"
+  },
+  "shared": false,
+  "ownedByMe": true,
+  "capabilities": {
+    "canAcceptOwnership": false,
+    "canAddChildren": false,
+    "canAddMyDriveParent": false,
+    "canChangeCopyRequiresWriterPermission": true,
+    "canChangeSecurityUpdateEnabled": false,
+    "canChangeViewersCanCopyContent": true,
+    "canComment": true,
+    "canCopy": true,
+    "canDelete": true,
+    "canDisableInheritedPermissions": false,
+    "canDownload": true,
+    "canEdit": true,
+    "canEnableInheritedPermissions": true,
+    "canListChildren": false,
+    "canModifyContent": true,
+    "canModifyContentRestriction": true,
+    "canModifyEditorContentRestriction": true,
+    "canModifyOwnerContentRestriction": true,
+    "canModifyLabels": false,
+    "canMoveChildrenWithinDrive": false,
+    "canMoveItemIntoTeamDrive": true,
+    "canMoveItemOutOfDrive": true,
+    "canMoveItemWithinDrive": true,
+    "canReadLabels": false,
+    "canReadRevisions": true,
+    "canRemoveChildren": false,
+    "canRemoveContentRestriction": false,
+    "canRemoveMyDriveParent": true,
+    "canRename": true,
+    "canShare": true,
+    "canTrash": true,
+    "canUntrash": true
+  },
+  "viewersCanCopyContent": true,
+  "copyRequiresWriterPermission": false,
+  "writersCanShare": true,
+  "permissions": [
+    {
+      "kind": "drive#permission",
+      "id": "08251672180811578534",
+      "type": "user",
+      "emailAddress": "maicondesouzateixeira@gmail.com",
+      "role": "owner",
+      "displayName": "maicondesouzateixeira",
+      "deleted": false,
+      "pendingOwner": false
+    }
+  ],
+  "permissionIds": [
+    "08251672180811578534"
+  ],
+  "originalFilename": "Untitled",
+  "fullFileExtension": "pdf",
+  "fileExtension": "pdf",
+  "md5Checksum": "f7fbf0526b7229ed9cc1b173b422532b",
+  "sha1Checksum": "917e35f7fdda717f8fed5ac860f0fd794e4aa7db",
+  "sha256Checksum": "7c0541e8bcb057bb5506bdb58132674eccbdb1f2bb5058a6982ab0775cce6000",
+  "size": "221032",
+  "quotaBytesUsed": "221032",
+  "headRevisionId": "0B0iy5bBcWHFhTEhockx2bGRkZE1SbmJBN0hvZnhJZzYvbnJjPQ",
+  "isAppAuthorized": true,
+  "linkShareMetadata": {
+    "securityUpdateEligible": false,
+    "securityUpdateEnabled": true
+  },
+  "inheritedPermissionsDisabled": false,
+  "filename": "story-bastidores-acolhedores-20250528_0937.json",
+  "slug": "story-bastidores-acolhedores",
+  "data_criacao": "2025-05-28T09:37:23.111Z",
+  "link_pdf": "https://drive.google.com/file/d/1J72al9cU1kIyarwpeiik5WWn_ybpcaVA/view?usp=drivesdk"
+}
