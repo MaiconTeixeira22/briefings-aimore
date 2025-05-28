@@ -1,3 +1,8 @@
+type Props = {
+  params: {
+    slug: string;
+  };
+};
 import { Metadata } from 'next';
 
 interface Referencia {
@@ -16,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Briefing | AiMore Briefings',
 };
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const res = await fetch('http://localhost:3000/json/index.json');
   const briefings = await res.json();
 
@@ -25,7 +30,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: Props) {
   const res = await fetch(`http://localhost:3000/json/${params.slug}.json`);
   const briefing = await res.json();
 
