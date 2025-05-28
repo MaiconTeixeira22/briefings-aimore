@@ -3,7 +3,6 @@ type Props = {
     slug: string;
   };
 };
-import { Metadata } from 'next';
 
 interface Referencia {
   nome: string;
@@ -24,17 +23,15 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const res = await fetch('http://localhost:3000/json/index.json');
-  const briefings = await res.json();
-
-  return briefings.map((item: { slug: string }) => ({
-    slug: item.slug,
-  }));
+export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
+  return [
+    { slug: 'briefing-teste' },
+    { slug: 'briefing-exemplo' }
+  ];
 }
 
 export default async function Page({ params }: Props) {
-  const res = await fetch(`http://localhost:3000/json/${params.slug}.json`);
+  const res = await fetch(`https://briefings-aimore.onrender.com/json/${params.slug}.json`);
   const briefing = await res.json();
 
   return (
