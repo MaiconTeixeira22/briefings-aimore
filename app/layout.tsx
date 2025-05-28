@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -26,14 +27,14 @@ export default function RootLayout({
           backgroundColor: '#FFFFFF'
         }}>
           <h1 style={{ fontSize: '20px', fontWeight: '600' }}>AiMore Briefings</h1>
-          <a href="/" style={{
+          <Link href="/" style={{
             padding: '8px 16px',
             borderRadius: '8px',
             backgroundColor: '#121212',
             color: '#FFFFFF',
             textDecoration: 'none',
             fontSize: '14px'
-          }}>Home</a>
+          }}>Home</Link>
         </header>
         <main style={{ padding: '48px', maxWidth: '1200px', margin: '0 auto' }}>
           {children}

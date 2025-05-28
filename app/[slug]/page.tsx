@@ -1,5 +1,17 @@
 import { Metadata } from 'next';
 
+interface Referencia {
+  nome: string;
+  descricao: string;
+  url: string;
+}
+
+interface RoteiroItem {
+  tempo: string;
+  visual: string;
+  texto: string;
+}
+
 export const metadata: Metadata = {
   title: 'Briefing | AiMore Briefings',
 };
@@ -70,7 +82,7 @@ export default async function Page({ params }: Props) {
           <h2 className="text-3xl font-bold mb-6">🎬 Roteiro Visual</h2>
           {briefing.roteiro ? (
             <div className="space-y-4">
-              {briefing.roteiro.map((item: any, idx: number) => (
+              {briefing.roteiro.map((item: RoteiroItem, idx: number) => (
                 <div
                   key={idx}
                   className="border border-neutral-800 rounded-xl p-4 bg-neutral-900"
@@ -141,7 +153,7 @@ export default async function Page({ params }: Props) {
           <section className="mb-10">
             <h2 className="text-3xl font-bold mb-6">🔗 Referências Visuais</h2>
             <ul className="space-y-4">
-              {briefing.referencias_visuais.map((ref: any, idx: number) => (
+              {briefing.referencias_visuais.map((ref: Referencia, idx: number) => (
                 <li key={idx} className="border border-neutral-800 rounded-xl p-4 bg-neutral-900">
                   <p className="font-bold">{ref.nome}</p>
                   <p>{ref.descricao}</p>
