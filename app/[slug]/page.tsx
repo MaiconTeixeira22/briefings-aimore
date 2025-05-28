@@ -1,8 +1,3 @@
-type Props = {
-  params: {
-    slug: string;
-  };
-};
 
 interface Referencia {
   nome: string;
@@ -17,7 +12,7 @@ interface RoteiroItem {
 }
 
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `Briefing | ${params.slug}`,
   };
@@ -30,7 +25,7 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   ];
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const res = await fetch(`https://briefings-aimore.onrender.com/json/${params.slug}.json`);
   const briefing = await res.json();
 
